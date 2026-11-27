@@ -73,8 +73,10 @@ html[data-bg="full"]:not([data-view="desktop"]) { overflow-x: clip; }
   html[data-bg="full"] main::before {
     content: "";
     display: block;
-    width: 100vw;
-    margin-inline: calc(50% - 50vw);
+    width: 100%;
+    margin-inline: 0;
+    margin-top: .5rem;
+    border-radius: 1rem;
     aspect-ratio: 2400 / 725;
     background:
       linear-gradient(180deg, rgba(251,250,255,.26), rgba(248,244,255,.34)),
@@ -84,12 +86,9 @@ html[data-bg="full"]:not([data-view="desktop"]) { overflow-x: clip; }
   }
   html[data-bg="full"] .hero { margin-top: 16px; }
   html[data-bg="full"][data-view="phone"] main::before {
-    position: relative;
-    left: 50%;
-    width: 100vw;
-    max-width: 30rem;
+    width: 100%;
+    max-width: 100%;
     margin-inline: 0;
-    transform: translateX(-50%);
   }
 }
 .brand { font-size: 1.375rem; letter-spacing: -.025em; }
@@ -176,6 +175,228 @@ body { color: #242031; line-height: 1.7; }
   .bar nav { height: auto; justify-content: space-between; column-gap: .5rem; }
   .themeControl select, .archivefilter select { max-width: 100%; }
 }
+
+/* ==========================================================================
+   글씨·모양새 최종 다듬기 (타이포 스케일 · 여백 · 정렬 통일)
+   ========================================================================== */
+:root {
+  --ink: #211d2e;
+  --ink-2: #3b3549;
+  --ink-3: #5b5569;
+  --ink-4: #726c81;
+  --line: #e5e2ee;
+  --line-soft: #efeaf6;
+  --chip: #f5f1fc;
+  --accent-ink: #4d2d86;
+  --radius-card: 1rem;
+}
+
+/* 1. 활자 리듬 ------------------------------------------------------------- */
+body { font-size: 1rem; line-height: 1.68; color: var(--ink); letter-spacing: -.003em; }
+
+/* 2. 머리글: 브랜드 + 메뉴를 왼쪽에, 보기 설정 + 시계를 오른쪽에 ------------- */
+.bar { height: 4.5rem; gap: 1.75rem; }
+.brand { font-size: 1.375rem; letter-spacing: -.03em; }
+.brand i { font-size: 2rem; }
+.bar nav { order: 1; gap: 1.5rem; }
+.bar .barTools { order: 2; margin-left: auto; gap: .3rem .9rem; }
+.bar .time { order: 3; margin-left: 0; font-size: .875rem; color: var(--ink-4); }
+nav button { font-size: .9375rem; font-weight: 650; letter-spacing: -.012em; padding: 0 .1rem; }
+nav .active { font-weight: 750; }
+.view-picker { font-size: .8125rem; color: var(--ink-3); gap: .35rem; }
+.view-picker select { min-height: 2.5rem; font-size: .9375rem; padding: .2rem .45rem; border-radius: .55rem; }
+
+/* 3. 첫 화면 배너 ----------------------------------------------------------- */
+.hero.selectedTheme { grid-template-columns: minmax(300px, 1fr) minmax(0, 1.32fr); }
+.selectedTheme .heroText { padding: 2rem clamp(1.25rem, 2.5vw, 2.5rem); }
+.hero h1, .selectedTheme .heroText h1 {
+  font-size: clamp(1.75rem, 3.15vw, 2.875rem);
+  line-height: 1.2;
+  letter-spacing: -.028em;
+  font-weight: 800;
+  margin: .6rem 0 .55rem;
+}
+.hero p { font-size: .9375rem; line-height: 1.6; max-width: 40ch; color: #efeaf7; text-wrap: pretty; }
+.hero .tag { font-size: .75rem; letter-spacing: .16em; }
+.themeControl { margin-top: 1.15rem; gap: .55rem; font-size: .8125rem; row-gap: .45rem; }
+.themeControl select { font-size: .875rem; min-height: 2.25rem; padding: .15rem .4rem; border-radius: .45rem; }
+.galleryLink, #artCredit {
+  display: inline-block;
+  width: auto;
+  margin: 0;
+  padding-bottom: .15rem;
+  font-size: .875rem;
+  white-space: nowrap;
+  border-bottom-color: #ffffff8a;
+}
+.heroLinks { display: flex; flex-wrap: wrap; align-items: center; gap: .35rem 1rem; margin-top: .85rem; }
+#artCredit:not([hidden]) { margin-top: 0; }
+
+/* 4. 구역 제목과 필터 ------------------------------------------------------- */
+.head { min-height: 2.5rem; gap: .5rem; align-items: center; }
+.titleflex { gap: .5rem; }
+.titleflex > i { width: 1.4rem; text-align: center; font-size: 1.25rem; }
+.head h2 { font-size: clamp(1.25rem, 2.1vw, 1.5rem); font-weight: 800; letter-spacing: -.03em; }
+.quiet { font-size: .875rem; color: var(--ink-4); padding: .4rem .55rem; border-radius: .5rem; }
+.quiet:hover { background: #ffffffb8; }
+.filterbar { margin: .9rem 0 .95rem; gap: .5rem; }
+.filters { gap: .4rem; }
+.pill { font-size: .9375rem; font-weight: 650; color: var(--ink-3); padding: .4rem .8rem; min-height: 2.25rem; border-radius: .6rem; background: #ffffffeb; border-color: #e2dced; }
+.pill.on { font-weight: 750; }
+#controls select, .archivefilter select, .archivefilter input { font-size: .9375rem; min-height: 2.25rem; border-radius: .6rem; color: var(--ink-3); background: #ffffffeb; border-color: #e2dced; }
+.archivefilter { gap: .5rem; margin: 1rem 0 .9rem; }
+
+/* 5. 멤버 카드 -------------------------------------------------------------- */
+.cards { gap: .9rem; }
+.card { padding: 1rem 1.05rem .85rem; border-radius: var(--radius-card); border-color: var(--line); box-shadow: 0 .55rem 1.4rem -1.15rem #241d4d1f; }
+.cardhead { gap: .8rem; }
+.cardhead .avatar { width: 3rem; height: 3rem; }
+.cardhead b { font-size: 1.0625rem; font-weight: 800; letter-spacing: -.022em; line-height: 1.35; }
+.cardhead small { display: block; margin-top: .15rem; font-size: .8125rem; color: var(--ink-4); }
+.card .icon { font-size: 1.25rem; padding: .4rem; border-radius: .5rem; }
+.cardbody {
+  margin: .7rem 0 .65rem;
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--ink-2);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  white-space: normal;
+}
+.statusrow { padding-top: .7rem; gap: .35rem; row-gap: .4rem; border-top-color: var(--line-soft); font-size: .875rem; color: var(--ink-3); }
+.badge { font-size: .8125rem; font-weight: 700; padding: .12rem .55rem; border-radius: 999px; background: #f1eff6; color: #57506a; letter-spacing: 0; }
+.badge.live { color: #b11e4b; background: #ffe1ec; }
+.channelActions { gap: .35rem; }
+.channelAction { min-height: 2.25rem; padding: .3rem .6rem; font-size: .875rem; font-weight: 650; border-radius: .6rem; background: var(--chip); color: var(--accent-ink); }
+
+/* 6. 방송 기록 목록 --------------------------------------------------------- */
+.records { gap: .55rem; }
+.record { padding: .85rem 1rem; gap: .85rem; border-radius: .9rem; border-color: var(--line); align-items: center; }
+.record .avatar { width: 2.75rem; height: 2.75rem; }
+.record > div { flex: 1 1 auto; }
+.record small { font-size: .875rem; line-height: 1.45; color: var(--ink-4); }
+.record strong { font-size: 1.0625rem; font-weight: 750; line-height: 1.45; letter-spacing: -.015em; color: var(--ink); }
+.record .cardlink { font-size: .875rem; font-weight: 650; white-space: nowrap; }
+.record .replayLink { gap: .55rem; }
+.replayThumb { width: 6.5rem; border-radius: .5rem; }
+.replayActions { gap: .45rem; }
+
+/* 7. 사이드바 --------------------------------------------------------------- */
+.panel { padding: 1.1rem 1.15rem; border-radius: var(--radius-card); border-color: var(--line); margin-bottom: .85rem; }
+.panel .subhead h2, .panel h2 { font-size: 1.1875rem; font-weight: 800; letter-spacing: -.025em; }
+.panel > .note { margin: .55rem 0 0; padding: .55rem .7rem; border: 0; background: #f7f5fb; font-size: .875rem; color: var(--ink-3); }
+#aside .noticePanel { margin-top: 0; }
+#aside .noticePanel .event { margin-top: .7rem; padding-top: .7rem; }
+#aside .noticePanel .event small { font-size: .8125rem; line-height: 1.45; }
+#aside .noticePanel .event a { font-size: .9375rem; line-height: 1.5; font-weight: 650; }
+#aside .noticePanel .avatar { width: 2.25rem; height: 2.25rem; }
+#aside .noticePanel .noticeRow { grid-template-columns: 2.25rem minmax(0, 1fr); gap: .6rem; }
+.event { margin-top: .8rem; padding-top: .8rem; }
+.date { font-size: .8125rem; letter-spacing: .01em; }
+.schedule h3 { margin: .35rem 0 .5rem; font-size: 1.0625rem; font-weight: 750; line-height: 1.45; letter-spacing: -.015em; }
+.panel .event a { font-size: .875rem; }
+.tinyrow { padding: .7rem 0; gap: .7rem; }
+.tinyrow .avatar { width: 2.5rem; height: 2.5rem; }
+.tinyrow b { font-size: .9375rem; font-weight: 700; letter-spacing: -.012em; }
+.tinyrow b + small { font-size: .8125rem; color: var(--ink-4); margin-top: .1rem; }
+.tinyrow time { font-size: .875rem; color: var(--ink-3); }
+.sideall { min-height: 2.5rem; margin-top: 1rem; font-size: .9375rem; font-weight: 650; border-radius: .6rem; }
+
+/* 8. 안내문과 바닥글 -------------------------------------------------------- */
+.note { margin: .9rem 0; padding: .6rem .8rem; border-radius: .7rem; font-size: .875rem; line-height: 1.55; color: var(--ink-3); }
+.foot {
+  margin: 2.2rem 0 1.5rem;
+  padding: .9rem 1.1rem;
+  gap: .5rem 1.5rem;
+  align-items: flex-start;
+  font-size: .8125rem;
+  line-height: 1.6;
+  color: var(--ink-4);
+}
+.foot span { display: block; }
+.foot small { display: block; margin-top: .2rem; font-size: .75rem; color: #7d7789; }
+.foot a { color: var(--ink-3); text-decoration: underline; text-underline-offset: .18em; }
+.foot .footmeta { margin-left: auto; text-align: right; }
+
+/* 9. 배경 위에서도 글씨가 또렷하게 (기본 배경) ------------------------------- */
+html[data-bg="default"] body::before,
+html:not([data-bg]) body::before {
+  background-image: linear-gradient(180deg, #f8f7fcd6 0%, #f7f6fbe2 46%, #f6f4fbeb 100%), url("./art/stellamode.webp");
+  background-size: auto, cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* 10. 화면 폭별 정리 -------------------------------------------------------- */
+@container screen-layout (max-width: 1100px) and (min-width: 690.02px) {
+  .bar { height: auto; min-height: 4.5rem; padding: .35rem 0 0; row-gap: .1rem; column-gap: .9rem; }
+  .bar .barTools { order: 1; width: auto; margin-left: auto; padding-bottom: 0; }
+  .bar .time { order: 2; margin-left: 0; }
+  .bar nav { order: 3; width: 100%; height: 2.75rem; gap: 1.25rem; }
+  .bar nav button { min-height: 2.75rem; padding-top: 0; padding-bottom: 0; }
+}
+@container screen-layout (max-width: 690px) {
+  /* 머리글: 브랜드 + 시계 / 보기 설정 / 메뉴 — 세 줄로 정리 */
+  .bar { height: auto; padding: .55rem 0 0; gap: .1rem .75rem; align-items: center; }
+  .brand { font-size: 1.25rem; }
+  .brand i { font-size: 1.75rem; }
+  .bar .time { order: 1; margin-left: auto; flex-basis: auto; margin-block: 0; font-size: .8125rem; }
+  .bar .barTools { order: 2; width: 100%; margin-left: 0; gap: .4rem .7rem; padding: .1rem 0 .35rem; }
+  .view-picker { flex: 1 1 auto; font-size: .75rem; }
+  .view-picker select { flex: 1 1 auto; min-width: 0; min-height: 2.5rem; font-size: .875rem; }
+  .bar nav { order: 3; width: 100%; gap: .25rem 1.1rem; }
+  nav button { min-height: 2.75rem; }
+  /* 배너 */
+  .hero { margin: 1rem 0 1.35rem; border-radius: 1rem; }
+  .hero.selectedTheme { grid-template-columns: 1fr; }
+  .selectedTheme .heroText { padding: .95rem 1.15rem 1.15rem; }
+  .hero h1, .selectedTheme .heroText h1 { font-size: clamp(1.875rem, 7.4vw, 2.25rem); line-height: 1.24; margin: .5rem 0 .45rem; }
+  .hero p { font-size: .9375rem; line-height: 1.55; max-width: 30ch; }
+  .themeControl { margin-top: .9rem; width: 100%; }
+  .themeControl select { flex: 1 1 auto; min-width: 0; max-width: 100%; }
+  /* 목록 */
+  .head { min-height: 0; }
+  .head h2 { font-size: 1.3125rem; }
+  .filterbar { flex-wrap: wrap; row-gap: .55rem; margin: .8rem 0 .85rem; }
+  .filters { flex: 1 1 auto; }
+  .filterbar > select { margin-left: auto; }
+  .card { padding: .9rem 1rem .8rem; }
+  .card .icon { margin-left: auto; }
+  .record { padding: .8rem .9rem; gap: .7rem; flex-wrap: wrap; row-gap: .5rem; }
+  .record .avatar { width: 2.5rem; height: 2.5rem; }
+  .record > div { flex: 1 1 auto; min-width: 0; }
+  .record .replayLink, .record .replayActions, .record > .cardlink { margin-left: auto; }
+  .replayThumb { width: 5.25rem; }
+  .panel { padding: 1rem 1.05rem; }
+  .noticePanel .event { margin-top: .7rem; padding-top: .7rem; }
+  .noticePanel .event small { font-size: .75rem; }
+  .noticePanel .event a { font-size: .9375rem; }
+  .noticeRow { grid-template-columns: 2rem minmax(0, 1fr); gap: .6rem; }
+  .noticeRow .avatar { width: 2rem; height: 2rem; }
+  .foot { flex-direction: column; gap: .55rem; margin: 1.8rem 0 1.2rem; }
+  .foot .footmeta { margin-left: 0; text-align: left; }
+}
+@container screen-layout (max-width: 560px) {
+  /* 좁은 화면: 제목이 눌리지 않도록 다시보기 링크를 아랫줄로 내린다. */
+  .record .replayLink, .record .replayActions, .record > .cardlink {
+    flex: 1 1 100%;
+    margin-left: 0;
+    justify-content: flex-start;
+  }
+  .record > div { flex: 1 1 9rem; }
+  .record > .cardlink { padding-left: 3.2rem; }
+  .record .replayLink, .record .replayActions { padding-left: 3.2rem; }
+  .replayThumb { width: 6rem; }
+  .record strong { font-size: 1.0625rem; }
+}
+@container screen-layout (max-width: 420px) {
+  .record .replayActions { flex-basis: 100%; }
+  .record .cardlink { font-size: .8125rem; }
+  .badge { font-size: .75rem; }
+  .channelAction { min-height: 2.5rem; padding: .3rem .6rem; font-size: .875rem; }
+}
 </style><body><script>
 function applyView(value) {
   document.documentElement.dataset.view = ['phone', 'desktop'].includes(value) ? value : 'auto';
@@ -185,7 +406,7 @@ function applyBg(value) {
 }
 try { applyView(localStorage.getItem('stellaView')); } catch { applyView('auto'); }
 try { applyBg(localStorage.getItem('stellaBg')); } catch { applyBg('default'); }
-</script><div class="view-shell"><header><div class="bar"><a class="brand" href="#live"><i>✦</i> 스텔라 온에어</a><div class="barTools"><label class="view-picker">화면 보기<select id="viewMode"><option value="auto">자동</option><option value="phone">휴대폰</option><option value="desktop">컴퓨터</option></select></label><label class="view-picker">배경<select id="bgMode"><option value="default">기본 배경</option><option value="full">공식 전체 보기</option></select></label></div><nav aria-label="메뉴"><button data-page="live">방송 현황</button><button data-page="archive">방송 기록</button><button data-page="schedule">방송 일정</button></nav><span class="time" id="clock"></span></div></header><main><section class="hero" id="hero"><div class="skyDecor" aria-hidden="true"></div><img id="heroArt" alt="" hidden><div class="heroText"><span class="tag"><span></span>STELLIVE ON AIR</span><h1 id="heroName">스텔라이브 방송국</h1><p id="heroBlurb">지금 켜진 방송부터 놓쳤던 방송까지 한눈에.</p><label class="themeControl">배너 테마 <select id="theme"><option value="">스텔라이브 전체</option></select></label><a class="galleryLink" href="./art/gallery.webp">멤버별 그림 모아보기</a><a hidden id="artCredit" target="_blank" rel="noopener">원본 영상</a></div></section><section class="layout"><div><div class="head"><div class="titleflex"><i id="symbol">◉</i><h2 id="heading"></h2></div><button class="quiet" id="refresh">⟳ 새로고침</button></div><div id="controls"></div><div id="content"></div><p id="note" class="note" role="status"></p></div><aside id="aside"></aside></section></main><footer><div class="foot"><span>✦ 스텔라 온에어 · 비공식 팬 사이트<br><small id="dailyStatus"></small></span><span>한국 표준시(KST) 기준　·　<a href="https://stellive.me/talents" target="_blank" rel="noopener">스텔라이브 공식 프로필</a></span></div></footer></div><script>
+</script><div class="view-shell"><header><div class="bar"><a class="brand" href="#live"><i>✦</i> 스텔라 온에어</a><div class="barTools"><label class="view-picker">화면 보기<select id="viewMode"><option value="auto">자동</option><option value="phone">휴대폰</option><option value="desktop">컴퓨터</option></select></label><label class="view-picker">배경<select id="bgMode"><option value="default">기본 배경</option><option value="full">공식 전체 보기</option></select></label></div><nav aria-label="메뉴"><button data-page="live">방송 현황</button><button data-page="archive">방송 기록</button><button data-page="schedule">방송 일정</button></nav><span class="time" id="clock"></span></div></header><main><section class="hero" id="hero"><div class="skyDecor" aria-hidden="true"></div><img id="heroArt" alt="" hidden><div class="heroText"><span class="tag"><span></span>STELLIVE ON AIR</span><h1 id="heroName">스텔라이브 방송국</h1><p id="heroBlurb">지금 켜진 방송부터 놓쳤던 방송까지 한눈에.</p><label class="themeControl">배너 테마 <select id="theme"><option value="">스텔라이브 전체</option></select></label><div class="heroLinks"><a class="galleryLink" href="./art/gallery.webp">멤버별 그림 모아보기</a><a hidden id="artCredit" target="_blank" rel="noopener">원본 영상</a></div></div></section><section class="layout"><div><div class="head"><div class="titleflex"><i id="symbol">◉</i><h2 id="heading"></h2></div><button class="quiet" id="refresh">⟳ 새로고침</button></div><div id="controls"></div><div id="content"></div><p id="note" class="note" role="status"></p></div><aside id="aside"></aside></section></main><footer><div class="foot"><span>✦ 스텔라 온에어 · 비공식 팬 사이트<br><small id="dailyStatus"></small></span><span class="footmeta">한국 표준시(KST) 기준<br><a href="https://stellive.me/talents" target="_blank" rel="noopener">스텔라이브 공식 프로필</a></span></div></footer></div><script>
 const viewPicker = document.getElementById('viewMode');
 viewPicker.value = document.documentElement.dataset.view;
 viewPicker.addEventListener('change', () => {
@@ -615,7 +836,7 @@ function replayUrl(url) {
   return match ? 'https://chzzk.naver.com/video/'+match[1] : '';
 }
 function channelButton(member) {
-  return link('https://chzzk.naver.com/'+member.id, member.name+' 치지직 채널');
+  return '<a class="cardlink" href="'+esc('https://chzzk.naver.com/'+member.id)+'" target="_blank" rel="noopener" aria-label="'+esc(member.name+' 치지직 채널')+'">치지직 채널</a>';
 }
 function recordLink(entry, schedule) {
   if (schedule) return link(entry.url, '공식 공지');
@@ -738,7 +959,7 @@ function card(m){
 }
 function notices(){
  const items=saved.filter(e=>e.kind==='notice'&&(!archiveMember||page!=='schedule'||archiveMember===e.name)&&(!query||page!=='schedule'||(e.title+e.name).includes(query))).sort((a,b)=>date(b.start)-date(a.start));
- const rows=items.slice(0,12).map(e=>{
+ const rows=items.slice(0,page==='schedule'?12:6).map(e=>{
   const member=members.find(m=>m.name===e.name);
   const portrait=member?avatar(member):'<img class="avatar" src="./art/ensemble.webp" alt="">';
   return '<article class="event noticeRow">'+portrait+'<div><small>'+fmt(e.start,{year:'numeric',month:'numeric',day:'numeric'})+' 게시 · '+esc(e.name)+'</small><div><span class="badge '+(e.category==='일반'?'':'live')+'">'+esc(e.category)+'</span> '+link(e.url,esc(e.title))+'</div></div></article>';
