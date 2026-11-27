@@ -1,0 +1,42 @@
+name: 방송 데이터 갱신
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 치지직 방송 상태 수집
+        run: python3 scripts/update_live.py
+
+      - name: 새 다시보기 수집 (매시 정각대에만)
+        run: |
+          if [ "$(date -u +%M)" -lt 15 ]; then
+            python3 scripts/update_videos.py
+          else
+            echo "다시보기는 정각대에만 확인합니다"
+          fi
+
+      - name: 변경분 커밋
+        run: |
+          if git diff --quiet -- data/; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git config user.name "stellive-onair bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: 방송 데이터 갱신"
+          git push
