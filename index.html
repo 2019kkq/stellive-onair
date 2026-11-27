@@ -682,7 +682,7 @@ function body(){
  const arr=schedule?all:all.slice(0,40);
  const chzzkMore=!schedule&&arr.length?chzzkMoreLink():'';
  const missingThumb=!schedule&&arr.some(e=>{const u=replayUrl(e.url);return u&&!(e.thumbnailImageUrl||replayData.thumbnails[u])});
- $('content').innerHTML=arr.length?'<div class="records">'+arr.map(e=>{const m=members.find(m=>m.name===e.name);return '<article class="record">'+(m?avatar(m):'')+'<div><small>'+esc(e.name)+'</small><strong>'+esc(e.title)+'</strong><small>'+fmt(e.start)+' '+(schedule?'예정':(e.published?'게시':'시작')+' · '+lengthText(e.minutes))+'</small></div>'+recordLink(e,schedule)+'</article>'}).join('')+'</div>'+chzzkMore):'<div class="empty">'+(schedule?'조건에 맞는 방송 예고가 없어요.':'일치하는 방송 기록이 없어요.')+'</div>';
+ $('content').innerHTML=arr.length?'<div class="records">'+arr.map(e=>{const m=members.find(m=>m.name===e.name);return '<article class="record">'+(m?avatar(m):'')+'<div><small>'+esc(e.name)+'</small><strong>'+esc(e.title)+'</strong><small>'+fmt(e.start)+' '+(schedule?'예정':(e.published?'게시':'시작')+' · '+lengthText(e.minutes))+'</small></div>'+recordLink(e,schedule)+'</article>'}).join('')+'</div>'+chzzkMore:'<div class="empty">'+(schedule?'조건에 맞는 방송 예고가 없어요.':'일치하는 방송 기록이 없어요.')+'</div>';
  $('note').textContent=schedule?'공식 공지에서 확인한 일정만 표시해요. 일정은 변경될 수 있어요.':archiveBusy?'방송 기록을 불러오고 있어요.':'치지직 다시보기와 스텔라북에서 확인한 기록이에요. 게시 시각만 확인된 영상은 ‘게시’로 표시해요.';
  if (missingThumb) $('note').textContent += ' 썸네일이 없는 기록은 다시보기·채널 링크만 표시돼요.';
  }
