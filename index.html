@@ -1,0 +1,762 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%231b1830'/%3E%3Ctext x='16' y='23' font-size='20' text-anchor='middle' fill='%23c3aaff'%3E%E2%9C%A6%3C/text%3E%3C/svg%3E"><title>스텔라 온에어 · 스텔라이브 방송 현황</title>
+<style>
+*{box-sizing:border-box}body{margin:0;color:#211f32;background:#f7f7fb;font:16px/1.54 Inter,Pretendard,-apple-system,BlinkMacSystemFont,"Malgun Gothic",sans-serif}button,a,input,select{font:inherit}button,a{cursor:pointer}a{color:inherit;text-decoration:none}button{color:inherit}button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #9672ef;outline-offset:3px}
+header{background:white;border-bottom:1px solid #e5e3ed}.bar,main,footer{width:min(1192px,92%);margin:auto}.bar{display:flex;align-items:center;gap:40px;height:73px}.brand{display:flex;align-items:center;gap:9px;white-space:nowrap;font-size:21px;font-weight:850;letter-spacing:-1px}.brand i{font:35px/1 Georgia;color:#7960ca}.bar nav{display:flex;gap:25px;height:100%}nav button{background:none;border:0;border-bottom:3px solid transparent;color:#797587;font-size:15px;padding:4px 1px 0;font-weight:650}nav .active{border-bottom-color:#7652c0;color:#7351b9}.time{margin-left:auto;font:13px monospace;color:#635e71}.hero{position:relative;overflow:hidden;margin:26px 0 30px;border-radius:20px;background:#181627 url(./art/orbit.webp) center/cover;color:white;padding:29px 4.1% 30px;min-height:216px;display:flex;flex-direction:column;justify-content:center}.tag{font:700 12px/1.4 monospace;letter-spacing:2px;color:#d7c6ff}.hero h1{font-size:clamp(32px,4vw,54px);line-height:1.17;letter-spacing:-2.6px;margin:12px 0 11px}.hero p{margin:0;color:#e2ddeb;font-size:15px}.hero .tag span{width:22px;height:2px;background:#baa2ed;display:inline-block;vertical-align:middle;margin-right:9px}
+.layout{display:grid;grid-template-columns:minmax(0,2.15fr) minmax(260px,.85fr);gap:24px}.head,.subhead,.line,.filters,.cardhead,.statusrow,.titleflex{display:flex;align-items:center;gap:9px}.head,.subhead,.statusrow{justify-content:space-between}.head{min-height:37px}.titleflex>i{font-style:normal;font-size:20px;color:#7456c3}.head h2,.subhead h2{margin:0;font-size:23px;letter-spacing:-1.1px}.subhead h2{font-size:19px}.quiet,.icon{background:none;border:0;color:#6b667a}.quiet{font-size:14px}.filterbar{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:15px 0}.filters{gap:5px;flex-wrap:wrap}.pill,select,input{border:1px solid #e3e0eb;background:white;color:#635e72;padding:6px 10px;border-radius:8px;font-size:14px}.pill.on{background:#ede6fc;border-color:#d8c8f5;color:#6543aa;font-weight:750}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.card,.panel,.record{background:white;border:1px solid #e4e2ec;border-radius:14px}.card{padding:15px 17px 12px}.avatar{width:51px;height:51px;object-fit:cover;border-radius:50%;border:1px solid #e8e3f2;background:#eee8fa}.cardhead{gap:12px}.cardhead b{display:block;font-size:17px;letter-spacing:-.65px}.cardhead small,.muted,footer{color:#767182;font-size:13px}.icon{margin-left:auto;font-size:23px;line-height:1;padding:5px;color:#888194}.fav{color:#9363c6}.cardbody{margin:12px 0 9px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:14px;color:#524e61}.statusrow{padding-top:9px;border-top:1px solid #eeedf3;font-size:13px}.badge{border-radius:5px;padding:2px 7px;background:#f0eff4;color:#716a7a;font-weight:650;font-size:12px}.badge.live{color:#b11e4b;background:#ffdfeb}.cardlink{font-size:13px;color:#73569e;font-weight:650}.panel{padding:19px;margin-bottom:15px}.schedule{background:linear-gradient(120deg,#faf7ff,#f0eafa);border-color:#ded4ee}.date{font:700 13px monospace;color:#7855ac}.schedule h3{margin:7px 0;font-size:18px}.schedule p{margin:0}.event{margin-top:16px;padding-top:13px;border-top:1px solid #ded6eb}.tinyrow{display:grid;grid-template-columns:35px 1fr auto;align-items:center;gap:9px;padding:12px 0;border-bottom:1px solid #eeedf2}.tinyrow:last-child{border:0;padding-bottom:0}.tinyrow img{width:35px;height:35px;border-radius:50%}.tinyrow b,.tinyrow small{display:block}.tinyrow b{font-size:14px}.tinyrow small{font-size:12px;color:#716b7c}.tinyrow time{font-size:13px;color:#6f667c}.records{display:grid;gap:9px}.record{padding:15px;display:flex;align-items:center;gap:13px}.record strong,.record small{display:block}.record small{color:#706a7c;font-size:14px}.record .cardlink{margin-left:auto}.empty{padding:22px;border:1px dashed #d4cede;border-radius:12px;color:#706a7b}.note{font-size:13px;color:#4b4658;margin:12px 0;background:#ffffffd9;border:1px solid #e7e3f0;border-radius:10px;padding:8px 12px;backdrop-filter:blur(3px)}
+.note:empty{display:none}
+footer .foot{background:#ffffffe0;border:1px solid #e7e3f0;border-radius:12px;padding:12px 16px;backdrop-filter:blur(3px)}.sideall{margin:14px 0 0;width:100%;border-radius:8px;background:#f5f3f9;border:0;padding:8px;color:#635771;font-size:14px}.foot{border-top:1px solid #e0dce8;margin:35px 0 25px;padding-top:18px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.archivefilter{display:flex;gap:8px;margin:18px 0;flex-wrap:wrap}.archivefilter input{flex:1;min-width:130px}
+@container screen-layout (min-width:1450px){.hero{min-height:245px}}@container screen-layout (max-width:870px){.layout{grid-template-columns:minmax(0,1fr) 240px;gap:14px}.cards{grid-template-columns:1fr}.bar{gap:22px}.hero{background-position:60% center}}@container screen-layout (max-width:690px){.bar{height:auto;flex-wrap:wrap;gap:2px;padding:11px 0 0}.bar nav{order:3;width:100%;gap:24px;height:42px}.layout{display:flex;flex-direction:column}.hero{margin:16px 0 23px;min-height:174px;padding:20px;background-position:65% center}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#171426bf,transparent)}.hero>*{position:relative}.hero p{max-width:225px;font-size:14px}.card{padding:15px}.filterbar{flex-wrap:wrap}.cards{grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr))}.head h2{font-size:21px}.record{gap:8px}.record .avatar{width:36px;height:36px}.time{font-size:12px}}
+.channelActions{display:flex;gap:4px;align-items:center;flex-wrap:wrap;justify-content:flex-end}.channelAction{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:3px 9px;border-radius:8px;background:#f6f2fc;white-space:nowrap}.channelAction:hover,.channelAction:focus-visible{background:#eae0fa}.statusrow{flex-wrap:wrap}.channelActions{margin-left:auto}
+.hero{min-height:254px;isolation:isolate}.heroText{position:relative;z-index:2}.themeControl{display:inline-flex;align-items:center;gap:9px;font-size:13px;margin-top:16px;color:#fff}.themeControl select{color:white;background:#202039c9;border-color:#ffffff59;padding:5px;border-radius:6px}.themeControl option{background:#211e32;color:white} .hero.selectedTheme{display:grid;grid-template-columns:minmax(245px,0.83fr) minmax(0,1.55fr);padding:0;align-items:stretch;background:var(--deep);gap:0}.selectedTheme .skyDecor{display:block;position:absolute;inset:0;opacity:.34;background:radial-gradient(ellipse at 31% 100%,var(--glow),transparent 57%);pointer-events:none}.selectedTheme #heroArt{position:relative;grid-column:2;grid-row:1;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;align-self:center}.selectedTheme .heroText{grid-column:1;grid-row:1;align-self:center;padding:24px clamp(18px,3vw,42px);max-width:100%;width:auto}.selectedTheme .heroText h1{font-size:clamp(25px,3.4vw,46px)}.selectedTheme .heroText p{color:#eee9f4}.selectedTheme:before{display:none}
+.heroText{width:max-content;max-width:70%}.hero h1{word-break:keep-all}@container screen-layout (max-width:690px){.hero{min-height:208px}.heroText{max-width:70%}.hero.selectedTheme{grid-template-columns:1fr}.selectedTheme #heroArt{grid-row:1;grid-column:1}.selectedTheme .heroText{grid-row:2;grid-column:1;padding:15px 20px 20px}.selectedTheme .themeControl{margin-top:10px}.selectedTheme .heroText{text-shadow:0 1px 8px #141125}.hero h1{font-size:clamp(24px,6.6vw,34px)}}
+.galleryLink,#artCredit{font-size:13px;color:white;background:transparent;border:0;border-bottom:1px solid #ffffff60;padding:2px 0;margin:8px 0 0 9px}#artCredit:not([hidden]){display:block;width:fit-content;margin-left:0}#artCredit[hidden]{display:none}
+.noticePanel{margin-top:16px}.noticePanel h2{font-size:19px;margin:0}.noticePanel .event small{color:#655e75}.noticePanel a{font-size:15px}.noticeRow{display:grid;grid-template-columns:40px minmax(0,1fr);gap:10px;align-items:start;overflow-wrap:anywhere}.noticeRow .avatar{width:40px;height:40px}.noticeRow>div>div{margin-top:5px}
+/* Shared reading styles for the live, archive and schedule views. */
+body {
+  font-family: "Pretendard", "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  font-size: 1rem;
+  line-height: 1.65;
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+}
+/* The official STELLA MODE illustration sits behind the page content. */
+body { isolation: isolate; }
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background: linear-gradient(#f7f7fbad, #f7f7fbce),
+    url("./art/stellamode.webp") center / cover no-repeat;
+}
+.brand { font-size: 1.375rem; letter-spacing: -.025em; }
+.hero h1, .selectedTheme .heroText h1 {
+  font-size: clamp(1.75rem, 3.6vw, 3rem);
+  line-height: 1.22;
+  letter-spacing: -.025em;
+}
+.hero p { font-size: 1rem; color: #fff; }
+.hero:not(.selectedTheme)::before {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, #171426eb, #171426bd 52%, #17142636);
+}
+.tag { font-weight: 700; line-height: 1.5; font-family: inherit; font-size: .8125rem; letter-spacing: .09em; }
+.head h2, .subhead h2, .noticePanel h2, .schedule h3, .cardhead b {
+  line-height: 1.4; letter-spacing: -.018em;
+}
+.head h2 { font-size: clamp(1.375rem, 2.4vw, 1.625rem); }
+.subhead h2, .noticePanel h2 { font-size: 1.25rem; }
+.schedule h3, .cardhead b { font-size: 1.125rem; }
+nav button, .pill, input, select, .sideall, .noticePanel a, .tinyrow b { font-size: 1rem; }
+nav button { color: #575263; }
+.quiet, .themeControl, .galleryLink, #artCredit, .cardlink, .statusrow, .badge,
+.cardhead small, .muted, .tinyrow small, .tinyrow time, .note, footer, footer small,
+.noticePanel .event small, .record small, .date, .time { font-size: .9375rem; }
+.time, .date, .tinyrow time { font-family: inherit; font-variant-numeric: tabular-nums; }
+.cardhead small, .muted, .tinyrow small, .note, footer { color: #595466; }
+.cardbody { white-space: normal; overflow: visible; font-size: 1rem; line-height: 1.6; color: #393546; }
+.cardhead > div, .record > div, .layout > *, .tinyrow > * { min-width: 0; }
+.record { flex-wrap: wrap; }
+.record > div { flex: 1 1 10rem; }
+.filters, .archivefilter, .bar nav { row-gap: .4rem; }
+.bar nav { flex-wrap: wrap; }
+@container screen-layout (max-width: 690px) {
+  .heroText { max-width: 100%; }
+  .hero p { max-width: 28ch; }
+  .bar nav { height: auto; gap: .25rem 1.25rem; }
+  nav button { min-height: 2.75rem; }
+  .head { flex-wrap: wrap; }
+  .tinyrow { grid-template-columns: 35px minmax(0,1fr) auto; }
+}
+
+.view-shell { container: screen-layout / inline-size; margin-inline: auto; }
+html[data-view="phone"] .view-shell { max-width: 30rem; }
+html[data-view="desktop"] .view-shell { min-width: 64rem; }
+.view-picker { display: inline-flex; align-items: center; gap: .4rem; color: #514c60; font-size: .875rem; white-space: nowrap; }
+.view-picker select { min-height: 2.75rem; font-size: .9375rem; }
+@container screen-layout (max-width: 690px) {
+  .bar { justify-content: space-between; column-gap: .75rem; }
+  .time { flex-basis: 100%; margin: .2rem 0; }
+}
+@container screen-layout (max-width: 480px) {
+  .cards { grid-template-columns: minmax(0, 1fr); }
+}
+.replayLink { display:inline-flex; align-items:center; gap:.65rem; max-width:100%; }
+.replayActions { display:flex; flex-wrap:wrap; align-items:center; gap:.5rem; }
+.replayThumb { width:7.5rem; height:auto; aspect-ratio:16/9; object-fit:cover; border-radius:.45rem; }
+@container screen-layout (max-width: 690px) {
+  .replayThumb { width:5.5rem; }
+}
+body { color: #242031; line-height: 1.7; }
+.cardbody, .record strong, .event h3, .noticePanel .event a { font-size: 1.0625rem; line-height: 1.55; }
+.panel .event a, .record .cardlink, .cardlink.channelAction { color: #523184; }
+.noticePanel .event a, .record .cardlink { text-decoration: underline; text-underline-offset: .2em; }
+.record strong + small, .tinyrow b + small { margin-top: .25em; }
+.badge { color: #514959; }
+.themeControl { flex-wrap: wrap; }
+.themeControl select, .view-picker select { font-size: 1rem; }
+@container screen-layout (max-width: 420px) {
+  .record .replayActions { flex-basis: 100%; }
+  .bar nav { height: auto; justify-content: space-between; column-gap: .5rem; }
+  .themeControl select, .archivefilter select { max-width: 100%; }
+}
+</style><body><script>
+function applyView(value) {
+  document.documentElement.dataset.view = ['phone', 'desktop'].includes(value) ? value : 'auto';
+}
+try { applyView(localStorage.getItem('stellaView')); } catch { applyView('auto'); }
+</script><div class="view-shell"><header><div class="bar"><a class="brand" href="#live"><i>✦</i> 스텔라 온에어</a><label class="view-picker">화면 보기<select id="viewMode"><option value="auto">자동</option><option value="phone">휴대폰</option><option value="desktop">컴퓨터</option></select></label><nav aria-label="메뉴"><button data-page="live">방송 현황</button><button data-page="archive">방송 기록</button><button data-page="schedule">방송 일정</button></nav><span class="time" id="clock"></span></div></header><main><section class="hero" id="hero"><div class="skyDecor" aria-hidden="true"></div><img id="heroArt" alt="" hidden><div class="heroText"><span class="tag"><span></span>STELLIVE ON AIR</span><h1 id="heroName">스텔라이브 방송국</h1><p id="heroBlurb">지금 켜진 방송부터 놓쳤던 방송까지 한눈에.</p><label class="themeControl">배너 테마 <select id="theme"><option value="">스텔라이브 전체</option></select></label><a class="galleryLink" href="./art/gallery.webp">멤버별 그림 모아보기</a><a hidden id="artCredit" target="_blank" rel="noopener">원본 영상</a></div></section><section class="layout"><div><div class="head"><div class="titleflex"><i id="symbol">◉</i><h2 id="heading"></h2></div><button class="quiet" id="refresh">⟳ 새로고침</button></div><div id="controls"></div><div id="content"></div><p id="note" class="note" role="status"></p></div><aside id="aside"></aside></section></main><footer><div class="foot"><span>✦ 스텔라 온에어 · 비공식 팬 사이트<br><small id="dailyStatus"></small></span><span>한국 표준시(KST) 기준　·　<a href="https://stellive.me/talents" target="_blank" rel="noopener">스텔라이브 공식 프로필</a></span></div></footer></div><script>
+const viewPicker = document.getElementById('viewMode');
+viewPicker.value = document.documentElement.dataset.view;
+viewPicker.addEventListener('change', () => {
+  applyView(viewPicker.value);
+  try { localStorage.setItem('stellaView', viewPicker.value); } catch {}
+});
+
+const members=[{"name":"아야츠노 유니","id":"45e71a76e949e16a34764deb962f9d9f","group":"에버리스","image":"https://stellive.me/files/attach/images/talents/list/1yuni/wS6mrY/yuni.png","slug":"yuni","profile":"https://stellive.me/yuni"},{"name":"사키하네 후야","id":"36ddb9bb4f17593b60f1b63cec86611d","group":"에버리스","image":"https://stellive.me/files/attach/images/talents/list/1huya/db9hXN/huya.png","slug":"huya","profile":"https://stellive.me/huya"},{"name":"시라유키 히나","id":"b044e3a3b9259246bc92e863e7d3f3b8","group":"유니버스","image":"https://stellive.me/files/attach/images/talents/list/2hina/w7Rzyq/hina.png","slug":"hina","profile":"https://stellive.me/hina"},{"name":"네네코 마시로","id":"4515b179f86b67b4981e16190817c580","group":"유니버스","image":"https://stellive.me/files/attach/images/talents/list/2mashiro/bQM3gK/mashiro.png","slug":"mashiro","profile":"https://stellive.me/mashiro"},{"name":"아카네 리제","id":"4325b1d5bbc321fad3042306646e2e50","group":"유니버스","image":"https://stellive.me/files/attach/images/talents/list/2lize/BzvsXZ/lize.png","slug":"lize","profile":"https://stellive.me/lize"},{"name":"아라하시 타비","id":"a6c4ddb09cdb160478996007bff35296","group":"유니버스","image":"https://stellive.me/files/attach/images/talents/list/2tabi/5SeCfr/tabi.png","slug":"tabi","profile":"https://stellive.me/tabi"},{"name":"텐코 시부키","id":"64d76089fba26b180d9c9e48a32600d9","group":"클리셰","image":"https://stellive.me/files/attach/images/talents/list/3shibuki/crIqD2/shibuki.png","slug":"shibuki","profile":"https://stellive.me/shibuki"},{"name":"아오쿠모 린","id":"516937b5f85cbf2249ce31b0ad046b0f","group":"클리셰","image":"https://stellive.me/files/attach/images/talents/list/3rin/Qwv9xQ/rin.png","slug":"rin","profile":"https://stellive.me/rin"},{"name":"하나코 나나","id":"4d812b586ff63f8a2946e64fa860bbf5","group":"클리셰","image":"https://stellive.me/files/attach/images/talents/list/3nana/ARDySS/nana.png","slug":"nana","profile":"https://stellive.me/nana"},{"name":"유즈하 리코","id":"8fd39bb8de623317de90654718638b10","group":"클리셰","image":"https://stellive.me/files/attach/images/talents/list/3riko/VG9pX5/riko.png","slug":"riko","profile":"https://stellive.me/riko"},{"name":"시즈키 토아","id":"2299fad4bebb504b0978e1ec08b2f7d3","group":"어비스","image":"https://stellive.me/files/attach/images/talents/list/4toa/TiSH5a/toa.png","slug":"toa","profile":"https://stellive.me/toa"},{"name":"코가네 랑","id":"c657aa3592260a2b59669a72ec151936","group":"어비스","image":"https://stellive.me/files/attach/images/talents/list/4rang/4aJzCg/rang.png","slug":"rang","profile":"https://stellive.me/rang"},{"name":"하나요 히요리","id":"49d2c3cf8f0b2843d934ec15e82bb54c","group":"어비스","image":"https://stellive.me/files/attach/images/talents/list/4hiyori/JfKbq3/hiyori.png","slug":"hiyori","profile":"https://stellive.me/hiyori"},{"name":"토키노 메리","id":"792acf9ca28b42918710327e14b06b68","group":"어비스","image":"https://stellive.me/files/attach/images/talents/list/4mary/GWFJ9m/mary.png","slug":"mary","profile":"https://stellive.me/mary"}]; let saved=[
+  {
+    "name": "아야츠노 유니",
+    "title": "마인크래프트",
+    "start": "2026-11-23T15:43:00+09:00",
+    "minutes": 631,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "사키하네 후야",
+    "title": "슬롯바운드",
+    "start": "2026-11-23T18:19:00+09:00",
+    "minutes": 431,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "네네코 마시로",
+    "title": "마인크래프트",
+    "start": "2026-11-23T16:41:00+09:00",
+    "minutes": 358,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "하나코 나나",
+    "title": "김밥천국 시뮬레이터",
+    "start": "2026-11-23T16:24:00+09:00",
+    "minutes": 474,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "하나요 히요리",
+    "title": "애니메이션 OST 월드컵",
+    "start": "2026-11-22T23:00:00+09:00",
+    "minutes": 799,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아오쿠모 린",
+    "title": "마인크래프트 농사",
+    "start": "2026-11-22T22:00:00+09:00",
+    "minutes": 287,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "시즈키 토아",
+    "title": "저스트 채팅",
+    "start": "2026-11-22T21:26:00+09:00",
+    "minutes": 380,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "텐코 시부키",
+    "title": "마인크래프트",
+    "start": "2026-11-22T20:57:00+09:00",
+    "minutes": 320,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "시즈키 토아",
+    "title": "토아 생일 파티",
+    "start": "2026-11-22T17:57:00+09:00",
+    "minutes": 114,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "사키하네 후야",
+    "title": "슬롯바운드",
+    "start": "2026-11-22T14:29:00+09:00",
+    "minutes": 206,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "토키노 메리",
+    "title": "종합 게임",
+    "start": "2026-11-22T13:56:00+09:00",
+    "minutes": 228,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "시라유키 히나",
+    "title": "저스트 채팅",
+    "start": "2026-11-22T12:42:00+09:00",
+    "minutes": 134,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아야츠노 유니",
+    "title": "더브 나이트 라이브",
+    "start": "2026-11-22T11:03:00+09:00",
+    "minutes": 401,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아라하시 타비",
+    "title": "마인크래프트",
+    "start": "2026-11-21T21:43:00+09:00",
+    "minutes": 201,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "하나요 히요리",
+    "title": "애니메이션 OST 월드컵",
+    "start": "2026-11-21T21:00:00+09:00",
+    "minutes": 795,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아오쿠모 린",
+    "title": "저스트 채팅",
+    "start": "2026-11-21T19:50:00+09:00",
+    "minutes": 291,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아카네 리제",
+    "title": "리그 오브 레전드",
+    "start": "2026-11-21T19:47:00+09:00",
+    "minutes": 390,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "시라유키 히나",
+    "title": "명조 스토리 방송",
+    "start": "2026-11-21T17:27:00+09:00",
+    "minutes": 481,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "네네코 마시로",
+    "title": "마인크래프트",
+    "start": "2026-11-21T16:22:00+09:00",
+    "minutes": 462,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "하나코 나나",
+    "title": "용과 같이 0",
+    "start": "2026-11-21T16:01:00+09:00",
+    "minutes": 511,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "토키노 메리",
+    "title": "클로버핏",
+    "start": "2026-11-21T15:58:00+09:00",
+    "minutes": 393,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "코가네 랑",
+    "title": "산나비",
+    "start": "2026-11-21T13:59:00+09:00",
+    "minutes": 831,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아카네 리제",
+    "title": "마인크래프트",
+    "start": "2026-11-20T19:38:00+09:00",
+    "minutes": 325,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "텐코 시부키",
+    "title": "곤 피싱",
+    "start": "2026-11-20T17:30:00+09:00",
+    "minutes": 459,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "유즈하 리코",
+    "title": "곤 피싱",
+    "start": "2026-11-20T16:30:00+09:00",
+    "minutes": 474,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아라하시 타비",
+    "title": "명조 워더링 웨이브",
+    "start": "2026-11-20T15:59:00+09:00",
+    "minutes": 533,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "코가네 랑",
+    "title": "마인크래프트",
+    "start": "2026-11-19T23:43:00+09:00",
+    "minutes": 202,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "유즈하 리코",
+    "title": "돈 스타브 투게더",
+    "start": "2026-11-18T16:25:00+09:00",
+    "minutes": 520,
+    "url": "https://stelbook.com/diary",
+    "kind": "history"
+  },
+  {
+    "name": "아오쿠모 린",
+    "title": "신의상 공개 방송",
+    "start": "2026-11-28T19:00:00+09:00",
+    "minutes": null,
+    "url": "https://x.com/StelLive_kr/status/2124699504943497658",
+    "kind": "schedule"
+  }
+];
+const $=id=>document.getElementById(id), esc=x=>String(x??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const date=x=>new Date(typeof x==='string'&&/^\d{4}-\d\d-\d\d[ T]\d\d:\d\d:\d\d(?:\.\d+)?$/.test(x)?x.replace(' ','T')+'+09:00':x);
+const fmt=(x,options={month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})=>new Intl.DateTimeFormat('ko-KR',{timeZone:'Asia/Seoul',hourCycle:'h23',...options}).format(date(x));
+const lengthText=n=>Number.isFinite(n)?(Math.floor(n/60)?Math.floor(n/60)+'시간 ':'')+(n%60)+'분':'길이 미확인';
+const groupNames=['에버리스','유니버스','클리셰','어비스'];
+const generation=m=>(groupNames.indexOf(m.group)+1)+'기 · '+m.group;
+const avatar=m=>'<img class="avatar" src="./art/'+m.slug+'.webp" alt="">';
+const link=(url,label)=>'<a class="cardlink" href="'+esc(url)+'" target="_blank" rel="noopener">'+label+'</a>';
+const replayData={
+  "byStart": {
+    "하나요 히요리|2026-11-22T23:00:00+09:00": "https://chzzk.naver.com/video/16321348",
+    "아오쿠모 린|2026-11-22T22:00:00+09:00": "https://chzzk.naver.com/video/16318379",
+    "시즈키 토아|2026-11-22T21:26:00+09:00": "https://chzzk.naver.com/video/16319072",
+    "텐코 시부키|2026-11-22T20:57:00+09:00": "https://chzzk.naver.com/video/16317965",
+    "시즈키 토아|2026-11-22T17:57:00+09:00": "https://chzzk.naver.com/video/16309796",
+    "시라유키 히나|2026-11-22T12:42:00+09:00": "https://chzzk.naver.com/video/16306285",
+    "아야츠노 유니|2026-11-22T11:03:00+09:00": "https://chzzk.naver.com/video/16308070",
+    "아라하시 타비|2026-11-21T21:43:00+09:00": "https://chzzk.naver.com/video/16299231",
+    "하나요 히요리|2026-11-21T21:00:00+09:00": "https://chzzk.naver.com/video/16304691",
+    "아오쿠모 린|2026-11-21T19:50:00+09:00": "https://chzzk.naver.com/video/16298680",
+    "아카네 리제|2026-11-21T19:47:00+09:00": "https://chzzk.naver.com/video/16300803",
+    "시라유키 히나|2026-11-21T17:27:00+09:00": "https://chzzk.naver.com/video/16299769",
+    "네네코 마시로|2026-11-21T16:22:00+09:00": "https://chzzk.naver.com/video/16297712",
+    "하나코 나나|2026-11-21T16:01:00+09:00": "https://chzzk.naver.com/video/16298464",
+    "코가네 랑|2026-11-21T13:59:00+09:00": "https://chzzk.naver.com/video/16302415",
+    "아카네 리제|2026-11-20T19:38:00+09:00": "https://chzzk.naver.com/video/16282048",
+    "텐코 시부키|2026-11-20T17:30:00+09:00": "https://chzzk.naver.com/video/16282203",
+    "유즈하 리코|2026-11-20T16:30:00+09:00": "https://chzzk.naver.com/video/16281026",
+    "아라하시 타비|2026-11-20T15:59:00+09:00": "https://chzzk.naver.com/video/16281739",
+    "코가네 랑|2026-11-19T23:43:00+09:00": "https://chzzk.naver.com/video/16268372",
+    "유즈하 리코|2026-11-18T16:25:00+09:00": "https://chzzk.naver.com/video/16249017",
+    "아야츠노 유니|2026-11-23T15:43:00+09:00": "https://chzzk.naver.com/video/16332934",
+    "네네코 마시로|2026-11-23T16:41:00+09:00": "https://chzzk.naver.com/video/16327656",
+    "하나코 나나|2026-11-23T16:24:00+09:00": "https://chzzk.naver.com/video/16330350",
+    "사키하네 후야|2026-11-22T14:29:00+09:00": "https://chzzk.naver.com/video/16308231",
+    "토키노 메리|2026-11-22T13:56:00+09:00": "https://chzzk.naver.com/video/16308059",
+    "토키노 메리|2026-11-21T15:58:00+09:00": "https://chzzk.naver.com/video/16295563",
+    "토키노 메리|2026-11-24T19:56:00+09:00": "https://chzzk.naver.com/video/16348816"
+  },
+  "thumbnails": {
+    "https://chzzk.naver.com/video/16345639": "https://video-phinf.pstatic.net/20261125_27/1795533544629u5rby_JPEG/npP9UTmDFE_01.jpg",
+    "https://chzzk.naver.com/video/16332113": "https://video-phinf.pstatic.net/20261124_149/1795451912346QJspI_JPEG/xCoBGgXgp0_08.jpg",
+    "https://chzzk.naver.com/video/16308231": "https://video-phinf.pstatic.net/20261122_242/1795337963688PTkNK_JPEG/eioLWqWIAb_07.jpg",
+    "https://chzzk.naver.com/video/16290821": "https://video-phinf.pstatic.net/20261121_111/1795248116850UX6T7_JPEG/g5wxZHSQBG_02.jpg",
+    "https://chzzk.naver.com/video/16258414": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMTc5/MDAxNzk1MjQxMjMwMDE0.-M9RtnArYNu2hpuBYr27NuVO_B_qFKT7BdK7_6Dk0Zcg.xmgXzfq3HukyhXhcsCHwRzht_7UYKbTUK4R_XPbgbFgg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16247661": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMjgw/MDAxNzk1MjQxMjIxNzY1.ceR0uO2C-P5YoApHJOJ8WSDHZNZhRJeixNCeDgkBbI0g.XnR48zOCXwjhu8t6kgrJMxpAhhCRgM-qz7IGhwcSItEg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16184753": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMTcg/MDAxNzk1MjQxMjE0NjQy.Fy1NuaQHxn3O7cwntTLKZXm_edXB1foQMvt-LDLJKjkg.OxdCkPYWxEn9NIH0gZ7Bl98U97EZlACO-bwIrS5XFrog.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16150346": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMTQw/MDAxNzk1MjQxMjA4MjIy.UdlS2bhJCrJMZ-j2Z0jxAKzz22bIbdXhR-F5u-rxJpcg.mJHwHyuj4WvyiyhIKjBgTIGAECmS7f_fNSmzpRoh98Qg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16327656": "https://video-phinf.pstatic.net/20261123_238/1795441577124RWu78_JPEG/HkVljsPbHg_01.jpg",
+    "https://chzzk.naver.com/video/16297712": "https://video-phinf.pstatic.net/20261122_28/1795273966032Iueo3_JPEG/SgkkiYHzlB_01.jpg",
+    "https://chzzk.naver.com/video/16281309": "https://video-phinf.pstatic.net/20261121_99/17951894040558Oefu_JPEG/DD1qGZMfVZ_10.jpg",
+    "https://chzzk.naver.com/video/16266602": "https://video-phinf.pstatic.net/20261120_264/17951059568968PvLv_JPEG/CFJRgC8xC7_01.jpg",
+    "https://chzzk.naver.com/video/16261970": "https://video-phinf.pstatic.net/20261119_108/17950965140202lTXC_JPEG/Uj25m2vWeC_02.jpg",
+    "https://chzzk.naver.com/video/16247479": "https://video-phinf.pstatic.net/20261119_178/1795015323276V5CK3_JPEG/7B5Uhw2OB4_01.jpg",
+    "https://chzzk.naver.com/video/16212548": "https://video-phinf.pstatic.net/20261116_16/1794835144865dBX7P_JPEG/M6gxgl5S6C_09.jpg",
+    "https://chzzk.naver.com/video/16163296": "https://video-phinf.pstatic.net/20261113_123/1794578278313ctojW_JPEG/uDb59ChOgM_01.jpg",
+    "https://chzzk.naver.com/video/16132125": "https://video-phinf.pstatic.net/20261111_148/1794407846500EQnuO_JPEG/RdyTYXylWg_10.jpg",
+    "https://chzzk.naver.com/video/16116713": "https://video-phinf.pstatic.net/20261110_300/1794322754408ErrAN_JPEG/SpsvoxdomF_01.jpg",
+    "https://chzzk.naver.com/video/16319072": "https://video-phinf.pstatic.net/20261123_79/1795373624524xKUwx_JPEG/ap4eODCUrN_04.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16309796": "https://video-phinf.pstatic.net/20261122_160/1795344811381aRIvx_JPEG/ZKtB1DYBYm_04.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16302096": "https://video-phinf.pstatic.net/20261122_238/1795286391629jOPx1_JPEG/1EhguXBo29_10.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16267741": "https://video-phinf.pstatic.net/20261120_209/1795109616247YRgTj_JPEG/jSmxPSnJ9W_02.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16246712": "https://video-phinf.pstatic.net/20261119_291/1795014104162LLHq9_JPEG/kprYgT6RN0_07.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16234843": "https://video-phinf.pstatic.net/20261118_255/1794938971774yyWSG_JPEG/9zRex4gpE5_05.jpg",
+    "https://chzzk.naver.com/video/16201591": "https://video-phinf.pstatic.net/20261116_119/1794757964865vKP7B_JPEG/PRlzaHZyKD_02.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16187858": "https://video-phinf.pstatic.net/20261115_45/1794683885508AjvgA_JPEG/Al3Y90wL6c_01.jpg",
+    "https://chzzk.naver.com/video/16168921": "https://video-phinf.pstatic.net/20261114_192/1794591166086npPfl_JPEG/sVUQ9U2gBw_02.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16154899": "https://video-phinf.pstatic.net/20261113_173/1794514566131K9vD8_JPEG/yg54rU7EdW_03.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16347387": "https://video-phinf.pstatic.net/20261125_145/1795537562739Js0ll_JPEG/nf5DzmdKc6_02.jpg",
+    "https://chzzk.naver.com/video/16317965": "https://video-phinf.pstatic.net/20261123_47/1795368193385nupdb_JPEG/8NtP7IpnEp_02.jpg",
+    "https://chzzk.naver.com/video/16282203": "https://video-phinf.pstatic.net/20261121_181/17951914307169pcnG_JPEG/BXeaVRLsbM_07.jpg",
+    "https://chzzk.naver.com/video/16264170": "https://video-phinf.pstatic.net/20261120_75/1795100929820C41UM_JPEG/RV10OfUpUN_10.jpg",
+    "https://chzzk.naver.com/video/16250983": "https://video-phinf.pstatic.net/20261119_84/1795024304044d9Owl_JPEG/o2jyQCXH4f_01.jpg",
+    "https://chzzk.naver.com/video/16219286": "https://video-phinf.pstatic.net/20261117_126/1794853660163pKb9b_JPEG/39bbolXLyj_01.jpg",
+    "https://chzzk.naver.com/video/16201918": "https://video-phinf.pstatic.net/20261116_30/1794758858176vxftd_JPEG/YRQNruU32l_01.jpg",
+    "https://chzzk.naver.com/video/16186846": "https://video-phinf.pstatic.net/20261115_156/1794680121494hQEUr_JPEG/WVBl422jG6_01.jpg",
+    "https://chzzk.naver.com/video/16171261": "https://video-phinf.pstatic.net/20261114_21/1794600373611uWIFs_JPEG/fbalXZUmxv_01.jpg",
+    "https://chzzk.naver.com/video/16136380": "https://video-phinf.pstatic.net/20261112_47/1794416876828JIvai_JPEG/TjDIzzWwFI_01.jpg",
+    "https://chzzk.naver.com/video/16332934": "https://nng-phinf.pstatic.net/MjAyNjExMjRfNjYg/MDAxNzk1NTA4OTA2NzQy.Gs40CVqiFgkn4p6ZMI9VrL4bgEGTgVNCHzpd4jRavV8g.zhthZebqE0iSn6pmalDmAX2CgQzYw2bzfSzsqfSDsfMg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16308070": "https://nng-phinf.pstatic.net/MjAyNjExMjNfMjc0/MDAxNzk1MzYxOTUyMTYw.fQ4ObCjwaW9sW_uFQbTNU98l1-aboSG5Wi-xfwdGRKog.NB72QhdzoBreEoUs7Jen7rSzGW1dVouvO2WitASV6pog.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16296074": "https://nng-phinf.pstatic.net/MjAyNjExMjJfMTk1/MDAxNzk1MzU0MDE5NDcw.7vOPaXspqhvhLCqo_kJ7f8Po6UL4Gw8YE_l9lJOpHAMg.YdrzoYm539tlEzTAb_xuHfWxj8vEEJJLzIZDifnflwEg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16284955": "https://nng-phinf.pstatic.net/MjAyNjExMjFfOTEg/MDAxNzk1MjQ0NDMwNTkx.TLNcbxy7B1s2CtvMXRAgMMLr2EIk3rxEK1EIcdBFurcg.yJsBkPBHaBkCU8QT5zaLqXl1uupp2thRxLe-Uhz_Ki0g.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16256865": "https://video-phinf.pstatic.net/20261119_249/1795075672286L3p33_JPEG/97hxOCvEh9_01.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16216478": "https://nng-phinf.pstatic.net/MjAyNjExMTlfMjYy/MDAxNzk1MDgwODIwNDIx.v-59DzG5xchoJVnXiLzwNvF9PQG18lRQ79mMKqki0MYg.7W_mwYpnw-y3Bs0u2WvuCZpf_DiAaBsBpKn5xeRdnewg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16203981": "https://nng-phinf.pstatic.net/MjAyNjExMTlfMTI5/MDAxNzk1MDE4NzI3MTEy.LG_GO7EO4-JekDUCuObdEMcRxqjx875gR0Uuk8YqKEQg.iqaVevNuTYBYavTg2J9aL5O0vpaXmT0mFHat4D9prCgg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16188174": "https://nng-phinf.pstatic.net/MjAyNjExMTlfMTc3/MDAxNzk1MDE4NzE0NDg4.WpIW2lgQZEpqcdhYu3ECcDCc9zqTBbQZTMCly0K3q2wg.GuN5oVJES8U1ykdnKSTi4Baj7vhvashQO1V18VhDnGMg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16179578": "https://nng-phinf.pstatic.net/MjAyNjExMTlfNDQg/MDAxNzk1MDE4NzA2Njky.qCnxhOf-cOwnGXhaLfgg908cp_E8OvRR9DwifjOTniMg.2dD-USqh1vyC47EGx8qyMqpTA5ayIMDAegRnqSBCU8gg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16321348": "https://video-phinf.pstatic.net/20261123_246/1795404755698P2koY_JPEG/g6MTNkNKwb_01.jpg",
+    "https://chzzk.naver.com/video/16304691": "https://video-phinf.pstatic.net/20261122_140/1795310922481431LS_JPEG/uetubqa2R4_01.jpg",
+    "https://chzzk.naver.com/video/16286376": "https://video-phinf.pstatic.net/20261121_102/1795205359443UJQ1B_JPEG/6DZcQGCsS6_01.jpg",
+    "https://chzzk.naver.com/video/16270536": "https://video-phinf.pstatic.net/20261120_218/1795132359578Fryjr_JPEG/RClx22vtzA_03.jpg",
+    "https://chzzk.naver.com/video/16236602": "https://video-phinf.pstatic.net/20261118_243/1794950755319mnP0s_JPEG/DihAKWJNQK_01.jpg",
+    "https://chzzk.naver.com/video/16220617": "https://video-phinf.pstatic.net/20261117_256/1794864585309Etgkd_JPEG/4qwioXBqcL_01.jpg",
+    "https://chzzk.naver.com/video/16205754": "https://video-phinf.pstatic.net/20261116_212/1794779160535MtoNF_JPEG/2bdpus0HEb_01.jpg",
+    "https://chzzk.naver.com/video/16186310": "https://video-phinf.pstatic.net/20261115_84/17946778361470fgzh_JPEG/R5wALUNnvK_01.jpg",
+    "https://chzzk.naver.com/video/16185027": "https://video-phinf.pstatic.net/20261115_20/1794674121724hzpaq_JPEG/A1E77VeCgV_10.jpg",
+    "https://chzzk.naver.com/video/16184884": "https://video-phinf.pstatic.net/20261115_101/1794673800770emChY_JPEG/RMHUrbVzHV_10.jpg",
+    "https://chzzk.naver.com/video/16346980": "https://nng-phinf.pstatic.net/MjAyNjExMjVfMjI3/MDAxNzk1NTM3MTkxOTMy.Rzb37NFXIZGvuiYt7E1K4W_3R-4n4ptPu6D-y2vZZEkg.PwTGk1pVn_pQAYgFhh1eKozL-f5mPGTRYKrYbQq5mjog.JPEG/image.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16330350": "https://nng-phinf.pstatic.net/MjAyNjExMjRfMTc0/MDAxNzk1NDQ3NzMzMDM0.Vk7sNzOD2_bvKLZmhQpgenY4CYbtjWf4FHK2A8SkJ8kg.so0ZjENkHfh5lRIn32j20YPiA6pjTWsNc2bKvY2Bg80g.JPEG/image.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16197763": "https://nng-phinf.pstatic.net/MjAyNjExMTVfNTUg/MDAxNzk0NzQ5MjE2MjE4.QlT0cP4Cz6g7VKntkIC8xf70gNu-DlHCxbGyspXMTo4g.QRQ6H9zCeIwh6FJui9VkBZP1uhcN6zcKtfT-RtADWSkg.JPEG/image.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16179831": "https://nng-phinf.pstatic.net/MjAyNjExMTVfMzcg/MDAxNzk0NjcyNTU2MDMy.5oEO5-uCW3YnAcOCQPkNdXJdx8SN0RZqizdHzLCkRkMg.T0wd9w_T184IBeOzbp9sKhBenlN3t147QquvZ-t2KpEg.JPEG/image.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16163006": "https://nng-phinf.pstatic.net/MjAyNjExMTNfMTY1/MDAxNzk0NTc3NTQ4MTI1.W_wLNmh2UiWWN3ELvibWik6qc9TU8OsqaGJzLHs_MoMg.HB-zEqThk6mj0SSKJIHdyEB_pzZKgxZl_fhfLk5TOSgg.JPEG/image.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16153871": "https://nng-phinf.pstatic.net/MjAyNjExMTNfMTgz/MDAxNzk0NTA4MTM1Njg1.SZXpw5NJsl8DZRyPU8ehPuOiBGUpmtTHbutjj3sPIssg.NawG4NvDeQMiXtvHhn3gLB2Cei7DZo1WN2z1mPzZnhYg.JPEG/image.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16339672": "https://video-phinf.pstatic.net/20261124_286/1795514691375oWtaW_JPEG/5iQz7AmCv9_02.jpg",
+    "https://chzzk.naver.com/video/16333507": "https://video-phinf.pstatic.net/20261124_171/1795457036593pvrid_JPEG/6OXFDldclB_08.jpg",
+    "https://chzzk.naver.com/video/16302415": "https://video-phinf.pstatic.net/20261122_202/1795287839657k1N0n_JPEG/elms60sSOD_04.jpg",
+    "https://chzzk.naver.com/video/16268372": "https://video-phinf.pstatic.net/20261120_235/1795111818493AKvNq_JPEG/vPoJfNZVHX_05.jpg",
+    "https://chzzk.naver.com/video/16233615": "https://video-phinf.pstatic.net/20261118_23/1794934344809rGQec_JPEG/iNGkVccMZZ_10.jpg",
+    "https://chzzk.naver.com/video/16209174": "https://video-phinf.pstatic.net/20261116_58/1794819122917WFLyJ_JPEG/mCa5kUX6Ws_03.jpg",
+    "https://chzzk.naver.com/video/16202915": "https://video-phinf.pstatic.net/20261116_212/179476186480249dtx_JPEG/jaHzbHUfg0_05.jpg",
+    "https://chzzk.naver.com/video/16186078": "https://video-phinf.pstatic.net/20261115_135/1794677847156j6JQW_JPEG/hIAA1qFLzt_10.jpg?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16155962": "https://video-phinf.pstatic.net/20261113_190/1794530012478g1aje_JPEG/kd6io0eUJh_02.jpg",
+    "https://chzzk.naver.com/video/16318379": "https://video-phinf.pstatic.net/20261123_88/1795369944919Il9Fo_JPEG/EkHaiFN0pR_10.jpg",
+    "https://chzzk.naver.com/video/16298680": "https://video-phinf.pstatic.net/20261122_41/1795275991668qmC7r_JPEG/WXVJWtL9TE_09.jpg",
+    "https://chzzk.naver.com/video/16282815": "https://video-phinf.pstatic.net/20261121_210/1795192778697VmGFs_JPEG/o3ZAoXl2zT_06.jpg",
+    "https://chzzk.naver.com/video/16266814": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMjMw/MDAxNzk1MTkyNjU4NjUy.5UpSgCZwuk781_xdZZTBYGff6r3tF8PPB2jzIhNnOq0g.q5wBs7wa5y8vc0lASscKDr_RYd_kmfV729ZjqNrOMj0g.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16216555": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMjcz/MDAxNzk1MTkyNjcwOTY5.OI00NzrUqAImrhX6JZ-aDuRi5hpG8TovnYsk4jddl7Ag.yNTeH_feDxlPt1DVtSG8UtOHHy9HJQMOrfYAcAN0RwYg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16203702": "https://nng-phinf.pstatic.net/MjAyNjExMTdfMjk2/MDAxNzk0ODQ0NDk2MDY3.SgW3O05LxcQwjgOG9RQTIxAqtz_6H9j8iwneeBght6og.CUOOpy-mlh_gILFzK_AUqjBcnapE1PD1ui_lh0tx8vIg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16184786": "https://nng-phinf.pstatic.net/MjAyNjExMTdfMjU5/MDAxNzk0ODQ0MzUxNTYy.CHKFTpafhze0MzvOrOyiyJTQsg1FP6VgpyjEdb27FOUg.POTxzop1m_B14sEa9DAk7LL6VoXOk7JZu8B18Zwp_VQg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16135637": "https://nng-phinf.pstatic.net/MjAyNjExMTdfMTYg/MDAxNzk0ODQ0NDg1NTQ5.uf_Y9K1cDQ9TFAl2PLmjhMPSNyGXoaAqaJOfDcXZK_Yg.ublLJcDp8HgwiByjQcBQB4lnkF9rE8PCJ0jGq6DCFOIg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16120171": "https://nng-phinf.pstatic.net/MjAyNjExMTdfMTAg/MDAxNzk0ODQ0NDc1Mjc0.cWgKaXxMfyMgDzuouM95WQ3rN0NM706w3GoDnQru7hsg.7zK-tMxXMRFSu7ZsTOi_BlbzFjUmB5_UdwHLAwj_aQgg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16103624": "https://nng-phinf.pstatic.net/MjAyNjExMTFfOTIg/MDAxNzk0MzMxNTUyOTkx.AjJjzYfZK0SorTazq2CHLMmauILRaj0ye427fu-mL4Ig.I7F4ihrhm-ABjuk8oKMjfHEjHLVq-DfrhE6VId-rR2cg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16345480": "https://video-phinf.pstatic.net/20261125_245/1795533246917nGXRt_JPEG/sKuPA0WHJ7_01.jpg",
+    "https://chzzk.naver.com/video/16333263": "https://video-phinf.pstatic.net/20261124_5/179545588063748v2z_JPEG/OUj895ayJF_02.jpg",
+    "https://chzzk.naver.com/video/16281026": "https://video-phinf.pstatic.net/20261121_172/1795188760078kvvKN_JPEG/8cxW1N9Q2D_03.jpg",
+    "https://chzzk.naver.com/video/16265176": "https://video-phinf.pstatic.net/20261120_146/1795102818130Q164L_JPEG/oU2flSpf61_02.jpg",
+    "https://chzzk.naver.com/video/16249017": "https://video-phinf.pstatic.net/20261119_204/1795018501735DjOad_JPEG/U7KWxRGLez_10.jpg",
+    "https://chzzk.naver.com/video/16217728": "https://video-phinf.pstatic.net/20261117_147/1794847584670xqRBV_JPEG/oYKHpkx4fz_02.jpg",
+    "https://chzzk.naver.com/video/16203680": "https://video-phinf.pstatic.net/20261116_199/1794764374719bIsb2_JPEG/116XrT20ID_02.jpg",
+    "https://chzzk.naver.com/video/16168292": "https://video-phinf.pstatic.net/20261114_226/1794589278430XgXo2_JPEG/yH8984xzco_02.jpg",
+    "https://chzzk.naver.com/video/16137289": "https://video-phinf.pstatic.net/20261112_152/1794419792248mL0fl_JPEG/QUn8SNSK5f_02.jpg",
+    "https://chzzk.naver.com/video/16120904": "https://video-phinf.pstatic.net/20261111_185/1794333276640hIzzT_JPEG/uEn2BgmW7p_01.jpg",
+    "https://chzzk.naver.com/video/16347924": "https://video-phinf.pstatic.net/20261125_15/1795539023545d1CLy_JPEG/GJXr80H90t_02.jpg",
+    "https://chzzk.naver.com/video/16333730": "https://nng-phinf.pstatic.net/MjAyNjExMjRfOTMg/MDAxNzk1NDU3OTc2OTgx.fW5sciKhyC1WrMsfBXJRrs8iE7DAIVFsBoV2baY4LEAg.yB5in8-29w6OZOarhAqS4PhlKZvismDH7IcqePWW5Kwg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16324370": "https://nng-phinf.pstatic.net/MjAyNjExMjRfMTgw/MDAxNzk1NDU3NDI4MjM2.yQNVZyud5FOxbJ7uf_i1f45ZFTtDKGNxtWbklAW-ku8g.P-kR23xd8Wgqw6DTdMgkcuM6jP84RZGlRCSU0N1YBiMg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16306285": "https://nng-phinf.pstatic.net/MjAyNjExMjRfNzQg/MDAxNzk1NDU3NDMzNzQy.ZNaF6IDuN1hzyuvH4d0z6iv_i36CqcAjly9df1wEy9Ig._J7JhWUfDTnip3qDFEZIXHexVANq0D313UWAMV36k_og.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16299769": "https://nng-phinf.pstatic.net/MjAyNjExMjJfMjgx/MDAxNzk1MzE4ODk3MzEy.8b1B7b84-0E1wJq3Ic_p1aGhKNwFBGUEckdfn7ni_8Ug.kAS7eZPgUCVmAnrDCzgUvlrPoL0xWUYIo_BR4Tw3wsAg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16282351": "https://nng-phinf.pstatic.net/MjAyNjExMjFfMjkw/MDAxNzk1MTk0NTcyMDA0.ytqSFcbj6uada7y_6Ilr8Gg9BlF5PuQatya27GecPAEg.tCFoj8SsFlJbRxGWdf_iuTLyWyCFuvmxduMOzOQjM4Ag.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16260506": "https://nng-phinf.pstatic.net/MjAyNjExMTlfNjUg/MDAxNzk1MDkyNTE1ODA2.bhLiu5xHQ9eeAOyIYjs09kh_BJHK6Z7SwAKawx4bRNog.pEwx7J8lFvHs7tkA3DpRyhMW2b6OHwcJURgGy-Hls3kg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16251477": "https://nng-phinf.pstatic.net/MjAyNjExMTlfMjU1/MDAxNzk1MDkyMzMxMzk5.p6PsLxHPCxBUUgDzaWi-YYnkravGlVaCJK8TREbUGKUg.oUJ4EOl4Grs0uUVLcG5F06ifJd1qmDWigB_Myd14jbUg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16233292": "https://nng-phinf.pstatic.net/MjAyNjExMThfMTQ3/MDAxNzk0OTMzNjg4MzE4.ZH4-aLJtJZTF6UOOtcQk85f0mPTGAtl4bmQ16imQeDgg.PL1cpWv4IKi6Z0O47LhAvLh92sbyDPhjV86mH1J0PSIg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16154330": "https://nng-phinf.pstatic.net/MjAyNjExMTNfMjg1/MDAxNzk0NTEyMTc2NDQ2.O3zrcgjgxDLmRRWeoEA2Opj1mncRBwWgzjLd17M8HzYg.Vx6RRbPkVxqNslWPMDIqO3o0pXppnSbAy3ebTaUzrB4g.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16348816": "https://video-phinf.pstatic.net/20261125_217/1795542024446kQR1A_JPEG/eMk1Bsmvhs_01.jpg",
+    "https://chzzk.naver.com/video/16308059": "https://nng-phinf.pstatic.net/MjAyNjExMjNfMjg2/MDAxNzk1NDE1NjY3MjY4.jDnFHkkVPob0zYTXqOqSMT4mtzYC0PxxJxZSIDu6caYg.vPMpUO5-2eTntsocZCuzJFyUK8tzBrw5QOq63dhI_pAg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16295563": "https://nng-phinf.pstatic.net/MjAyNjExMjNfMTMg/MDAxNzk1NDE1NjM1NjE0.YWobgp6v72SaTZA_u-5vJtYIW1hnNotjuLP852uYJeQg.IwBZIpR-hsnZd47xWVuZjkYStgtnw8ua5uwR8x9X3Bkg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16284623": "https://nng-phinf.pstatic.net/MjAyNjExMjJfMTc3/MDAxNzk1MjczNTg3OTUw.tMow6CuEDCDvTyAOmemiMgwrUno3iOIOYnnmzzqzphYg.QRa2cz2eN4VphkuOwr5u9s8DQihkhocfwIpLkVaZcGgg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16251115": "https://nng-phinf.pstatic.net/MjAyNjExMjJfMjkw/MDAxNzk1MjczNTc1NDY1.Y6LvkJwfr4U9lr3nksgWFDpRoqkoxUCe_YPOFR1L62cg.g0GkALWVpVr-ACZsn4Yp_OFISlVRtAiZJAN680tEPcsg.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16233273": "https://nng-phinf.pstatic.net/MjAyNjExMjJfMjE3/MDAxNzk1MjczNTY0ODUw._MwrLVfOwJ_XMx0olUceiUTijApVEozHUpGXMLZxsuYg.kBj4S7tekXP36K-QeS7r8BBdKzP2jMRjRAlMNCubSI4g.PNG/image.png?type=o500x280_blur",
+    "https://chzzk.naver.com/video/16201297": "https://video-phinf.pstatic.net/20261116_93/1794757097849tExnd_JPEG/UM1vBAZQYG_04.jpg",
+    "https://chzzk.naver.com/video/16185267": "https://video-phinf.pstatic.net/20261115_280/1794675309940HBk4q_JPEG/znMIQQW7kc_02.jpg",
+    "https://chzzk.naver.com/video/16163626": "https://video-phinf.pstatic.net/20261113_205/1794579043727SXTmM_JPEG/V07LoKtC5r_10.jpg",
+    "https://chzzk.naver.com/video/16154205": "https://video-phinf.pstatic.net/20261113_245/1794509743514eE5IJ_JPEG/QUoxcOr41d_04.jpg",
+    "https://chzzk.naver.com/video/16347736": "https://video-phinf.pstatic.net/20261125_172/1795538331679WIEJ4_JPEG/ef1m5tzKBy_09.jpg",
+    "https://chzzk.naver.com/video/16300803": "https://video-phinf.pstatic.net/20261122_223/1795281845463Ot5lC_JPEG/ZHbDkPEd4G_10.jpg",
+    "https://chzzk.naver.com/video/16282048": "https://video-phinf.pstatic.net/20261121_237/1795190963982wgp1g_JPEG/ZQzDJVsD7V_02.jpg",
+    "https://chzzk.naver.com/video/16268051": "https://video-phinf.pstatic.net/20261120_160/1795110582032OSNdO_JPEG/rQeIa2031D_09.jpg",
+    "https://chzzk.naver.com/video/16249309": "https://video-phinf.pstatic.net/20261119_146/1795019062789EP5iF_JPEG/MgF1QHwAGg_08.jpg",
+    "https://chzzk.naver.com/video/16204621": "https://video-phinf.pstatic.net/20261116_2/1794768513945qAIcj_JPEG/N2nll4GnkO_01.jpg",
+    "https://chzzk.naver.com/video/16189898": "https://video-phinf.pstatic.net/20261115_108/1794702161497qkszW_JPEG/3AQD3FZOEU_03.jpg",
+    "https://chzzk.naver.com/video/16184265": "https://video-phinf.pstatic.net/20261115_110/1794672434683IW4j0_JPEG/ddPZ6I12YI_08.jpg",
+    "https://chzzk.naver.com/video/16145625": "https://video-phinf.pstatic.net/20261112_215/1794486636811FtD0m_JPEG/DVWAzaCjJ0_05.jpg",
+    "https://chzzk.naver.com/video/16132502": "https://video-phinf.pstatic.net/20261111_174/1794408341231j8j1z_JPEG/RYJPdX8HV4_08.jpg",
+    "https://chzzk.naver.com/video/16346940": "https://video-phinf.pstatic.net/20261125_148/1795536562193EJOAd_JPEG/UWMrAmIOyV_01.jpg",
+    "https://chzzk.naver.com/video/16333677": "https://video-phinf.pstatic.net/20261124_268/1795457659619qq9DW_JPEG/Egn98gXfyY_03.jpg",
+    "https://chzzk.naver.com/video/16299231": "https://video-phinf.pstatic.net/20261122_204/1795277298896orIhk_JPEG/Gi2djCMw2c_02.jpg",
+    "https://chzzk.naver.com/video/16299238": "https://video-phinf.pstatic.net/20261122_5/1795277136050VNkae_JPEG/2R0Gfhzj7M_07.jpg",
+    "https://chzzk.naver.com/video/16281739": "https://video-phinf.pstatic.net/20261121_232/1795190523088RbdSy_JPEG/BL4Tza42DK_02.jpg",
+    "https://chzzk.naver.com/video/16247301": "https://video-phinf.pstatic.net/20261119_49/1795015051033hY65q_JPEG/tTNl71S2Rn_02.jpg",
+    "https://chzzk.naver.com/video/16233098": "https://video-phinf.pstatic.net/20261118_213/1794932900491r6hdT_JPEG/x1HzLxhemx_07.jpg",
+    "https://chzzk.naver.com/video/16218043": "https://video-phinf.pstatic.net/20261117_234/1794848832510YDmuP_JPEG/Imh4dJ7DTN_02.jpg",
+    "https://chzzk.naver.com/video/16185426": "https://video-phinf.pstatic.net/20261115_278/1794675904141tBHSa_JPEG/b8nnRVZnaD_10.jpg",
+    "https://chzzk.naver.com/video/16166531": "https://video-phinf.pstatic.net/20261114_105/17945854488152rHIH_JPEG/S7ERPZaYfx_03.jpg"
+  }
+}
+;
+const failedThumbnails = new Set();
+function replayUrl(url) {
+  const match = /^https:\/\/chzzk\.naver\.com\/video\/(\d+)\/?(?:[?#].*)?$/.exec(url);
+  return match ? 'https://chzzk.naver.com/video/'+match[1] : '';
+}
+function channelButton(member) {
+  return link('https://chzzk.naver.com/'+member.id, member.name+' 치지직 채널');
+}
+function recordLink(entry, schedule) {
+  if (schedule) return link(entry.url, '공식 공지');
+  const member = members.find(m => m.name === entry.name);
+  const url = replayUrl(entry.url);
+  const original = entry.thumbnailImageUrl || replayData.thumbnails[url];
+  const src = typeof original === 'string' && original.startsWith('https://') ? original.replace('{type}', 'w320') : '';
+  if (!url) return channelButton(member);
+  if (!src || failedThumbnails.has(src)) return '<div class="replayActions">'+link(url,'다시보기')+channelButton(member)+'</div>';
+  const thumb = '<img class="replayThumb" src="'+esc(src)+'" loading="lazy" decoding="async" referrerpolicy="no-referrer" width="120" height="68" alt="">';
+  return '<a class="cardlink replayLink" data-member="'+member.id+'" href="'+esc(url)+'" target="_blank" rel="noopener" aria-label="'+esc(entry.name+' '+entry.title+' 다시보기')+'">'+thumb+'다시보기</a>';
+}
+$('content').addEventListener('error', event => {
+  const img = event.target;
+  if (!img.classList?.contains('replayThumb')) return;
+  const anchor = img.closest('.replayLink');
+  if (!anchor) return;
+  failedThumbnails.add(img.getAttribute('src'));
+  const member = members.find(m => m.id === anchor.dataset.member);
+  anchor.outerHTML = '<div class="replayActions">'+link(anchor.href,'다시보기')+channelButton(member)+'</div>';
+}, true);
+let page,filter='전체',group='',archiveMember='',query='',fresh={},states={},busy=false,archiveBusy=false,lastCheck='',archiveChecked=0,favorites=new Set(),archiveLimit=40,dailyChecked=0;
+try{favorites=new Set(JSON.parse(localStorage.stellaFavorites||'[]'))}catch{}
+const historical=()=>saved.filter(e=>e.kind==='history');
+const upcoming=()=>saved.filter(e=>e.kind==='schedule'&&date(e.start)>Date.now()).sort((a,b)=>date(a.start)-date(b.start));
+function records(){
+ const videos = new Map();
+ const unmatched = new Map();
+ for (const entry of [...historical(), ...Object.values(fresh).flat()]) {
+   const url = replayUrl(entry.url) || replayData.byStart[entry.name+'|'+entry.start];
+   if (!url) {
+     const minute = Math.floor(date(entry.start) / 60000);
+     unmatched.set(entry.name+'|'+minute, entry);
+     continue;
+   }
+   const older = videos.get(url);
+   const startRecord = older && !older.published ? older : entry;
+   videos.set(url, {...older, ...entry, url, start: startRecord.start, published: !!startRecord.published,
+     thumbnailImageUrl: entry.thumbnailImageUrl || older?.thumbnailImageUrl});
+ }
+ const leftovers = [];
+ const candidates = new Map();
+ for (const entry of unmatched.values()) {
+   const matches = [...videos.values()].filter(video => {
+     if (video.name !== entry.name) return false;
+     const minutesApart = (date(video.start) - date(entry.start)) / 60000;
+     if (!video.published) return Math.abs(minutesApart) < 1;
+     if (!Number.isFinite(entry.minutes) || !Number.isFinite(video.minutes)) return false;
+     const delay = minutesApart - entry.minutes;
+     return Math.abs(entry.minutes-video.minutes) <= 1 && delay >= -1 && delay <= 45;
+   });
+   if (matches.length !== 1) { leftovers.push(entry); continue; }
+   const url = matches[0].url;
+   if (!candidates.has(url)) candidates.set(url, []);
+   candidates.get(url).push(entry);
+ }
+ for (const [url, entries] of candidates) {
+   if (entries.length > 1) { leftovers.push(...entries); continue; }
+   const video = videos.get(url);
+   if (video.published) videos.set(url, {...video, start: entries[0].start, published: false});
+ }
+ return [...videos.values(), ...leftovers].sort((a,b) => date(b.start) - date(a.start));
+}
+function channelActions(m){
+ const home='https://chzzk.naver.com/'+m.id;
+ const player='https://chzzk.naver.com/live/'+m.id;
+ const target=window.top===window.self?'_self':'_blank';
+ const anchor=(url,label)=>'<a class="cardlink channelAction" href="'+url+'" target="'+target+'" rel="noopener" referrerpolicy="no-referrer" aria-label="'+esc(m.name)+' '+label+'">'+label+'</a>';
+ return '<div class="channelActions">'+anchor(home,'채널 보기')+anchor(player,'방송 보기')+'</div>';
+}
+const looks={
+ yuni:['#272247','#9f8bc9','라일락 성운'],huya:['#281630','#865397','자수정의 밤'],
+ hina:['#18263e','#4e88a1','겨울 달빛'],mashiro:['#222b29','#8f9074','숲속의 별'],
+ lize:['#361a27','#a04f53','붉은 노을'],tabi:['#173342','#52a5b6','빙하의 물결'],
+ shibuki:['#321f3e','#b3739b','벚꽃 은하'],rin:['#142640','#4b7ead','푸른 달의 정원'],
+ nana:['#352439','#aa667f','로즈 네온'],riko:['#173935','#5a9c7c','비취 오로라'],
+ toa:['#291b38','#925299','자줏빛 월식'],rang:['#322738','#b08b5a','황금 별자리'],
+ hiyori:['#302138','#ba869d','새벽 꽃구름'],mary:['#182632','#6c849e','은빛 궤도']
+};
+const artSources={
+ "yuni": "https://www.pixiv.net/en/artworks/108395129",
+ "huya": "https://x.com/SakihaneHuya/status/2124915540498272620",
+ "hina": "https://x.com/farufaru20_1/status/1931909121080508528",
+ "mashiro": "https://www.youtube.com/watch?v=rOKiGV-weXA",
+ "lize": "https://www.pixiv.net/en/artworks/140638800",
+ "tabi": "https://www.pixiv.net/en/artworks/136838732",
+ "shibuki": "https://www.pixiv.net/en/artworks/139107795",
+ "rin": "https://www.pixiv.net/en/artworks/135208440",
+ "nana": "https://www.pixiv.net/en/artworks/137542777",
+ "riko": "https://www.pixiv.net/en/artworks/132868434",
+ "toa": "https://x.com/daro_0_0/status/2124792654072562047",
+ "rang": "https://www.youtube.com/watch?v=iAoU1UGPoXc",
+ "hiyori": "https://x.com/mttpape/status/2111459758842789889",
+ "mary": "https://pbs.twimg.com/media/HXT2WZxbMAADkhz?format=jpg&name=orig"
+};
+function setTheme(slug){
+ const member=members.find(m=>m.slug===slug),hero=$('hero'),art=$('heroArt');
+ hero.classList.add('selectedTheme');
+ $('theme').value=member?.slug||'';
+ const source=artSources[slug];
+ $('artCredit').hidden=!source;if(source)$('artCredit').href=source;
+ $('artCredit').textContent='원본 작품';
+ document.querySelector('.galleryLink').href='./art/gallery.webp?v=final';
+
+ if(member){
+ const [dark,glow,title]=looks[slug];
+ hero.style.setProperty('--deep',dark);hero.style.setProperty('--glow',glow);
+ art.src='./art/fan'+slug+'.webp?v=final';art.alt=member.name+' 테마 일러스트';art.hidden=false;
+ $('heroName').textContent=member.name+' 방송국';$('heroBlurb').textContent=generation(member);
+ }else{hero.style.setProperty('--deep','#1d1b35');hero.style.setProperty('--glow','#8672b9');art.src='./art/ensemble.webp';art.alt='스텔라이브 멤버 14명의 일러스트 모자이크';art.hidden=false;$('heroName').textContent='스텔라이브 방송국';$('heroBlurb').textContent='지금 켜진 방송부터 놓쳤던 방송까지 한눈에.'}
+ try{localStorage.stellaTheme=member?.slug||''}catch{}
+}
+$('theme').insertAdjacentHTML('beforeend',members.map(m=>'<option value="'+m.slug+'">'+esc(m.name)+'</option>').join(''));
+let initialTheme='';try{initialTheme=localStorage.getItem('stellaTheme')??''}catch{}setTheme(initialTheme);
+$('theme').addEventListener('change',e=>setTheme(e.target.value));
+function card(m){
+ const s=states[m.id]||{},live=s.status==='live',past=records().find(e=>e.name===m.name),star=favorites.has(m.id);
+ const title=live?s.title:past?(past.published?'최근 게시 · ':'최근 방송 · ')+fmt(past.start):'최근 방송 기록 없음';
+ return '<article class="card"><div class="cardhead">'+avatar(m)+'<div><b>'+esc(m.name)+'</b><small>'+generation(m)+'</small></div><button class="icon '+(star?'fav':'')+'" data-star="'+m.id+'" aria-pressed="'+star+'" aria-label="'+m.name+' 즐겨찾기">'+(star?'★':'☆')+'</button></div><div class="cardbody" title="'+esc(title)+'">'+esc(title)+'</div><div class="statusrow"><span><span class="badge '+(live?'live':'')+'">'+(live?'● LIVE':s.status==='off'?'오프라인':s.status==='unknown'?'확인 필요':'조회 중')+'</span> '+(live&&s.start?fmt(s.start,{hour:'2-digit',minute:'2-digit'})+' 시작 · '+lengthText(Math.max(0,Math.floor((Date.now()-date(s.start))/60000))):'')+'</span>'+channelActions(m)+'</div></article>';
+}
+function notices(){
+ const items=saved.filter(e=>e.kind==='notice'&&(!archiveMember||page!=='schedule'||archiveMember===e.name)&&(!query||page!=='schedule'||(e.title+e.name).includes(query))).sort((a,b)=>date(b.start)-date(a.start));
+ const rows=items.slice(0,12).map(e=>{
+  const member=members.find(m=>m.name===e.name);
+  const portrait=member?avatar(member):'<img class="avatar" src="./art/ensemble.webp" alt="">';
+  return '<article class="event noticeRow">'+portrait+'<div><small>'+fmt(e.start,{year:'numeric',month:'numeric',day:'numeric'})+' 게시 · '+esc(e.name)+'</small><div><span class="badge '+(e.category==='일반'?'':'live')+'">'+esc(e.category)+'</span> '+link(e.url,esc(e.title))+'</div></div></article>';
+ });
+ return '<section class="panel noticePanel"><h2>공식 공지</h2>'+(rows.join('')||'<p class="note">표시할 공지가 없어요.</p>')+'</section>';
+}
+function showSide(){
+ const next=upcoming()[0];
+ $('aside').innerHTML='<div class="panel schedule"><div class="subhead"><h2>다가오는 방송</h2><span aria-hidden="true">✧</span></div>'+(next?'<div class="event"><span class="date">'+fmt(next.start,{month:'long',day:'numeric',weekday:'short',hour:'2-digit',minute:'2-digit'})+'</span><h3>'+esc(next.name)+' · '+esc(next.title)+'</h3>'+link(next.url,'공식 공지 보기')+'</div>':'<p class="note">등록된 방송 예고가 없어요.</p>')+'</div><div class="panel"><div class="subhead"><h2>최근 방송 기록</h2></div>'+records().slice(0,4).map(e=>{const m=members.find(m=>m.name===e.name);return '<a class="tinyrow" href="'+esc(e.url)+'" target="_blank" rel="noopener">'+(m?avatar(m):'')+'<span><b>'+esc(e.name)+'</b><small>'+fmt(e.start,{month:'numeric',day:'numeric'})+' '+(e.published?'게시':'방송')+'</small></span><time>'+lengthText(e.minutes)+'</time></a>'}).join('')+'<button data-page="archive" class="sideall">방송 기록 전체 보기</button></div>';
+}
+function body(){
+ if(page==='live'){
+ let ms=members.filter(m=>(!group||m.group===group)&&(filter==='전체'||(filter==='즐겨찾기'?favorites.has(m.id):states[m.id]?.status==='live'))).sort((a,b)=>Number(states[b.id]?.status==='live')-Number(states[a.id]?.status==='live'));
+ const cards=ms.length?'<div class="cards">'+ms.map(card).join('')+'</div>':'<div class="empty">'+(filter==='즐겨찾기'?'멤버 이름 옆 별을 누르면 여기에 모여요.':'현재 조건에 맞는 멤버가 없어요.')+'</div>';
+ if($('content').dataset.cards!==cards){$('content').innerHTML=cards;$('content').dataset.cards=cards}
+ $('note').textContent=(lastCheck?'치지직 상태 '+lastCheck+' 기준 · ':'')+'방송 상태는 몇 분 주기로 자동 갱신돼요. ‘확인 필요’는 치지직 응답을 받지 못한 채널이에요.';
+ }else{
+ delete $('content').dataset.cards;
+ const schedule=page==='schedule',all=(schedule?upcoming():records()).filter(e=>(!archiveMember||e.name===archiveMember)&&(!query||(e.title+e.name).includes(query)));
+ const arr=schedule?all:all.slice(0,archiveLimit);
+ const more=!schedule&&all.length>arr.length;
+ const missingThumb=!schedule&&arr.some(e=>{const u=replayUrl(e.url);return u&&!(e.thumbnailImageUrl||replayData.thumbnails[u])});
+ $('content').innerHTML=arr.length?'<div class="records">'+arr.map(e=>{const m=members.find(m=>m.name===e.name);return '<article class="record">'+(m?avatar(m):'')+'<div><small>'+esc(e.name)+'</small><strong>'+esc(e.title)+'</strong><small>'+fmt(e.start)+' '+(schedule?'예정':(e.published?'게시':'시작')+' · '+lengthText(e.minutes))+'</small></div>'+recordLink(e,schedule)+'</article>'}).join('')+'</div>'+(more?'<button class="sideall" id="moreRecords">방송 기록 더 보기 ('+(all.length-arr.length)+'건)</button>':''):'<div class="empty">'+(schedule?'조건에 맞는 방송 예고가 없어요.':'일치하는 방송 기록이 없어요.')+'</div>';
+ $('note').textContent=schedule?'공식 공지에서 확인한 일정만 표시해요. 일정은 변경될 수 있어요.':archiveBusy?'방송 기록을 불러오고 있어요.':'치지직 다시보기와 스텔라북에서 확인한 기록이에요. 게시 시각만 확인된 영상은 ‘게시’로 표시해요.';
+ if (missingThumb) $('note').textContent += ' 썸네일이 없는 기록은 다시보기·채널 링크만 표시돼요.';
+ }
+ showSide();
+ if(page==='schedule')$('content').insertAdjacentHTML('beforeend',notices());else $('aside').insertAdjacentHTML('afterbegin',notices());
+}
+function render(){
+ page=['archive','schedule'].includes(location.hash.slice(1))?location.hash.slice(1):'live';
+ document.querySelectorAll('nav button').forEach(b=>b.classList.toggle('active',b.dataset.page===page));
+ $('heading').textContent={live:'멤버 방송 현황',archive:'방송 기록',schedule:'예정된 방송'}[page];
+ $('symbol').textContent={live:'◉',archive:'▤',schedule:'◷'}[page];
+ $('refresh').hidden=page==='schedule';
+ $('controls').innerHTML=page==='live'?'<div class="filterbar"><div class="filters">'+['전체','방송 중','즐겨찾기'].map(f=>'<button class="pill '+(f===filter?'on':'')+'" data-filter="'+f+'">'+f+(f==='전체'?' '+members.length:'')+'</button>').join('')+'</div><select aria-label="기수 선택" id="group"><option value="">모든 기수</option>'+groupNames.map((g,i)=>'<option '+(group===g?'selected':'')+' value="'+g+'">'+(i+1)+'기 '+g+'</option>').join('')+'</select></div>':'<div class="archivefilter"><select id="member" aria-label="멤버 선택"><option value="">전체 멤버</option>'+members.map(m=>'<option '+(m.name===archiveMember?'selected':'')+'>'+m.name+'</option>').join('')+'</select><input id="query" aria-label="방송 검색" placeholder="멤버 또는 방송 검색" value="'+esc(query)+'"></div>';
+ body();
+}
+const stamp=()=>'?_='+Math.floor(Date.now()/60000);
+async function loadLive(){
+ if(busy)return;busy=true;
+ try{
+  const r=await fetch('./data/live.json'+stamp(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+  if(!r.ok)throw Error();
+  const d=await r.json();
+  const channels=d&&d.channels||{};
+  members.forEach(m=>{const s=channels[m.id];states[m.id]=s?{status:s.status,title:s.title,start:s.start}:{status:'unknown'}});
+  lastCheck=d&&d.updatedAt?fmt(d.updatedAt,{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'}):'';
+ }catch{members.forEach(m=>{if(!states[m.id])states[m.id]={status:'unknown'}})}
+ busy=false;body();
+}
+async function loadArchive(force=false){
+ if(archiveBusy||(!force&&archiveChecked))return;
+ archiveBusy=true;body();
+ try{
+  const r=await fetch('./data/videos.json'+stamp(),{cache:'no-store',signal:AbortSignal.timeout(15000)});
+  if(!r.ok)throw Error();
+  const d=await r.json();
+  members.forEach(m=>{const list=Array.isArray(d[m.id])?d[m.id]:[];fresh[m.id]=list.filter(v=>v&&v.start&&Number.isFinite(+date(v.start))).map(v=>({...v,name:m.name}))});
+  archiveChecked=Date.now();
+ }catch{}
+ archiveBusy=false;body();
+}
+document.addEventListener('click',e=>{const b=e.target.closest('button');if(!b)return;
+ if(b.dataset.page)location.hash=b.dataset.page;
+ if(b.id==='moreRecords'){archiveLimit+=60;body()}
+ if(b.dataset.filter){filter=b.dataset.filter;render()}
+ if(b.dataset.star){const id=b.dataset.star;favorites.has(id)?favorites.delete(id):favorites.add(id);try{localStorage.stellaFavorites=JSON.stringify([...favorites])}catch{}body()}
+ if(b.id==='refresh'){if(page==='archive')loadArchive(true);else{if(!busy)$('note').textContent='방송 상태를 다시 확인하고 있어요.';loadLive()}}
+});
+document.addEventListener('change',e=>{if(e.target.id==='group'){group=e.target.value;body()}if(e.target.id==='member'){archiveMember=e.target.value;archiveLimit=40;setTheme(members.find(m=>m.name===archiveMember)?.slug||'');body()}});
+document.addEventListener('input',e=>{if(e.target.id==='query'){query=e.target.value;archiveLimit=40;body()}});
+function navigate(){query='';archiveMember='';render();if(page==='archive')loadArchive();window.scrollTo(0,0)}
+let timer,dailyBusy=false;
+async function loadDaily(force=false){
+ if(dailyBusy||(!force&&dailyChecked&&Date.now()-dailyChecked<300000))return;
+ dailyBusy=true;
+ try{
+  const r=await fetch('./data/daily.json'+stamp(),{cache:'no-store',signal:AbortSignal.timeout(10000)});
+  if(!r.ok)throw Error();
+  const data=await r.json();
+  if(!Array.isArray(data.records))throw Error();
+  saved=data.records;
+  $('dailyStatus').textContent=data.updatedAt?'일정·공지·기록 마지막 저장 '+fmt(data.updatedAt):'일정·기록 최초 수집본';
+  dailyChecked=Date.now();
+  body();
+ }catch{$('dailyStatus').textContent='일정·기록 갱신을 기다리는 중이에요.'}
+ finally{dailyBusy=false}
+}
+function tick(){
+ clearTimeout(timer);
+ const now=Date.now();
+ $('clock').textContent=fmt(now,{month:'long',day:'numeric',weekday:'short',hour:'2-digit',minute:'2-digit'})+' KST';
+ body();
+ timer=setTimeout(tick,60000-now%60000);
+}
+function refreshVisible(){
+ if(document.hidden)return;
+ tick();loadDaily();loadLive();
+ loadArchive();
+}
+window.addEventListener('hashchange',navigate);
+document.addEventListener('visibilitychange',refreshVisible);
+window.addEventListener('pageshow',refreshVisible);
+window.addEventListener('online',refreshVisible);
+navigate();refreshVisible();setInterval(refreshVisible,60000);
+</script></body></html>

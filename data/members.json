@@ -1,0 +1,100 @@
+[
+ {
+  "name": "아야츠노 유니",
+  "id": "45e71a76e949e16a34764deb962f9d9f",
+  "slug": "yuni",
+  "group": "에버리스",
+  "profile": "https://stellive.me/yuni"
+ },
+ {
+  "name": "사키하네 후야",
+  "id": "36ddb9bb4f17593b60f1b63cec86611d",
+  "slug": "huya",
+  "group": "에버리스",
+  "profile": "https://stellive.me/huya"
+ },
+ {
+  "name": "시라유키 히나",
+  "id": "b044e3a3b9259246bc92e863e7d3f3b8",
+  "slug": "hina",
+  "group": "유니버스",
+  "profile": "https://stellive.me/hina"
+ },
+ {
+  "name": "네네코 마시로",
+  "id": "4515b179f86b67b4981e16190817c580",
+  "slug": "mashiro",
+  "group": "유니버스",
+  "profile": "https://stellive.me/mashiro"
+ },
+ {
+  "name": "아카네 리제",
+  "id": "4325b1d5bbc321fad3042306646e2e50",
+  "slug": "lize",
+  "group": "유니버스",
+  "profile": "https://stellive.me/lize"
+ },
+ {
+  "name": "아라하시 타비",
+  "id": "a6c4ddb09cdb160478996007bff35296",
+  "slug": "tabi",
+  "group": "유니버스",
+  "profile": "https://stellive.me/tabi"
+ },
+ {
+  "name": "텐코 시부키",
+  "id": "64d76089fba26b180d9c9e48a32600d9",
+  "slug": "shibuki",
+  "group": "클리셰",
+  "profile": "https://stellive.me/shibuki"
+ },
+ {
+  "name": "아오쿠모 린",
+  "id": "516937b5f85cbf2249ce31b0ad046b0f",
+  "slug": "rin",
+  "group": "클리셰",
+  "profile": "https://stellive.me/rin"
+ },
+ {
+  "name": "하나코 나나",
+  "id": "4d812b586ff63f8a2946e64fa860bbf5",
+  "slug": "nana",
+  "group": "클리셰",
+  "profile": "https://stellive.me/nana"
+ },
+ {
+  "name": "유즈하 리코",
+  "id": "8fd39bb8de623317de90654718638b10",
+  "slug": "riko",
+  "group": "클리셰",
+  "profile": "https://stellive.me/riko"
+ },
+ {
+  "name": "시즈키 토아",
+  "id": "2299fad4bebb504b0978e1ec08b2f7d3",
+  "slug": "toa",
+  "group": "어비스",
+  "profile": "https://stellive.me/toa"
+ },
+ {
+  "name": "코가네 랑",
+  "id": "c657aa3592260a2b59669a72ec151936",
+  "slug": "rang",
+  "group": "어비스",
+  "profile": "https://stellive.me/rang"
+ },
+ {
+  "name": "하나요 히요리",
+  "id": "49d2c3cf8f0b2843d934ec15e82bb54c",
+  "slug": "hiyori",
+  "group": "어비스",
+  "profile": "https://stellive.me/hiyori"
+ },
+ {
+  "name": "토키노 메리",
+  "id": "792acf9ca28b42918710327e14b06b68",
+  "slug": "mary",
+  "group": "어비스",
+  "profile": "https://stellive.me/mary"
+ }
+]
