@@ -1,0 +1,53 @@
+# GitHub Actions 로 방송 데이터를 자동 갱신하는 워크플로입니다.
+#
+# Pickle의 GitHub 연결에는 `workflows` 권한이 없어 이 파일을 저장소에 직접 커밋할 수 없습니다.
+# GitHub 웹에서 아래 경로로 새 파일을 만들고 이 내용을 그대로 붙여넣으면 동작합니다.
+#
+#   경로: .github/workflows/update-data.yml
+#
+# 10분마다 치지직에서 방송 상태를 받아 data/live.json을 갱신하고,
+# 매시 정각대에는 새 다시보기를 data/videos.json에 덧붙입니다.
+# 내용이 바뀐 경우에만 커밋합니다.
+
+name: 방송 데이터 갱신
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: update-data
+  cancel-in-progress: true
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: 치지직 방송 상태 수집
+        run: python3 scripts/update_live.py
+
+      - name: 새 다시보기 수집 (매시 정각대에만)
+        run: |
+          if [ "$(date -u +%M)" -lt 15 ]; then
+            python3 scripts/update_videos.py
+          else
+            echo "다시보기는 정각대에만 확인합니다"
+          fi
+
+      - name: 변경분 커밋
+        run: |
+          if git diff --quiet -- data/; then
+            echo "변경 없음 — 커밋 생략"
+            exit 0
+          fi
+          git config user.name "stellive-onair bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/
+          git commit -m "chore: 방송 데이터 갱신 [skip ci]"
+          git push

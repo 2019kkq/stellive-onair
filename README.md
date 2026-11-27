@@ -18,7 +18,7 @@
 | `data/daily.json` | 공식 공지·방송 일정 기록 + `updatedAt` |
 | `scripts/update_live.py` | 치지직에서 방송 상태를 받아 `data/live.json` 갱신 |
 | `scripts/update_videos.py` | 새 다시보기만 `data/videos.json`에 추가 |
-| `.github/workflows/` | 위 두 스크립트를 정해진 주기로 실행 |
+| `scripts/actions/update-data.yml` | 위 스크립트를 10분마다 실행하는 워크플로. **아래 설명대로 한 번 옮겨 붙여야 동작합니다.** |
 
 ## 데이터가 갱신되는 방식
 
@@ -26,13 +26,29 @@ GitHub Pages는 정적 호스팅이라 브라우저가 치지직 API를 직접 �
 치지직은 `Origin` 헤더가 붙은 교차 출처 요청을 403으로 막고 `Access-Control-Allow-Origin`도 주지 않습니다.
 그래서 수집은 **GitHub Actions(서버 측)** 가 맡습니다.
 
-- `update-live.yml` — 5분마다 `data/live.json` 갱신. 내용이 바뀔 때만 커밋합니다.
-- `update-videos.yml` — 매일 05:00(KST) `data/videos.json`에 새 다시보기 추가.
+### 한 번만 해두면 되는 설정
+
+1. 저장소 → **Settings → Pages → Build and deployment**
+   - Source: **Deploy from a branch** / Branch: **main** / 폴더: **/ (root)** → Save
+2. 자동 갱신을 켜려면 `.github/workflows/update-data.yml` 파일을 사이트에서 만들어야 합니다.
+   `scripts/actions/update-data.yml` 내용을 복사해 같은 경로로 저장하면 10분마다 아래 작업이 돕니다.
+   (Pickle의 GitHub 연결에는 `workflows` 권한이 없어 이 파일만은 직접 올릴 수 없습니다.)
+
+### 워크플로가 하는 일
+
+- 10분마다 `scripts/update_live.py` — 치지직 방송 상태를 받아 `data/live.json` 갱신
+- 매시 정각대에 `scripts/update_videos.py` — 새 다시보기를 `data/videos.json`에 추가
+- 내용이 바뀔 때만 커밋하므로 커밋 기록이 과도하게 쌓이지 않습니다.
 
 사이트는 열려 있는 동안 `data/live.json`을 1분마다 다시 읽고, 화면에 `치지직 상태 M/D HH:MM 기준`이라고 스냅샷 시각을 표시합니다.
-Actions가 멈추면 이 시각이 그대로 남아 있어 데이터가 얼마나 오래된 것인지 바로 알 수 있습니다.
+워크플로가 멈추면 이 시각이 그대로 남아 있어 데이터가 얼마나 오래된 것인지 바로 알 수 있습니다.
 
-Actions를 끄거나 사용할 수 없는 환경에서도 사이트는 마지막 커밋된 스냅샷으로 정상 동작합니다.
+워크플로를 켜지 않아도 사이트는 마지막으로 커밋된 스냅샷으로 정상 동작합니다.
+이때 최신 상태가 필요하면 같은 스크립트를 로컬에서 한 번 돌리고 커밋하면 됩니다:
+
+```bash
+python3 scripts/update_live.py && git commit -am "방송 상태 갱신" && git push
+```
 
 ## 로컬에서 보기
 
