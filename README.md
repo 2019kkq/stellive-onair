@@ -15,9 +15,11 @@
 | `data/members.json` | 멤버 14명의 이름·치지직 채널 ID·슬러그·기수 |
 | `data/live.json` | 방송 상태 스냅샷(상태·방송 제목·시작 시각) + `updatedAt` |
 | `data/videos.json` | 멤버별 최근 다시보기 기록(썸네일·길이·링크) |
-| `data/daily.json` | 공식 공지·방송 일정 기록 + `updatedAt` |
+| `data/daily.json` | 공식 공지·방송 일정 기록 + `updatedAt` (카페에서 자동 수집) |
+| `data/daily-cache.json` | 자동 수집이 확인한 카페 글의 판정 캐시(같은 글을 다시 읽지 않도록) |
 | `scripts/update_live.py` | 치지직에서 방송 상태를 받아 `data/live.json` 갱신 |
 | `scripts/update_videos.py` | 새 다시보기만 `data/videos.json`에 추가 |
+| `scripts/update_daily.py` | 네이버 카페(공지사항·멤버 게시판)에서 공지와 방송 일정을 모아 `data/daily.json` 갱신 |
 | `scripts/actions/update-data.yml` | 위 스크립트를 10분마다 실행하는 워크플로. **아래 설명대로 한 번 옮겨 붙여야 동작합니다.** |
 
 ## 데이터가 갱신되는 방식
@@ -38,6 +40,7 @@ GitHub Pages는 정적 호스팅이라 브라우저가 치지직 API를 직접 �
 
 - 10분마다 `scripts/update_live.py` — 치지직 방송 상태를 받아 `data/live.json` 갱신
 - 매시 정각대에 `scripts/update_videos.py` — 새 다시보기를 `data/videos.json`에 추가
+- 30분에 한 번 `scripts/update_daily.py` — 네이버 카페 `공지사항`과 멤버 게시판에서 공지·방송 일정을 모아 `data/daily.json` 갱신
 - 내용이 바뀔 때만 커밋하므로 커밋 기록이 과도하게 쌓이지 않습니다.
 
 사이트는 열려 있는 동안 `data/live.json`을 1분마다 다시 읽고, 화면에 `치지직 상태 M/D HH:MM 기준`이라고 스냅샷 시각을 표시합니다.
